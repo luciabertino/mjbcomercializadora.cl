@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <title>MJB Importadora</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<title>MJB | Distribuidora</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
+
 <body>
 
-<!--================ HEADER =================-->
+    <div class="business-bar">
 
-<header>
-
-<div class="top-header">
-
-<div class="logo">
-
-<img src="img/logo.png" alt="Logo">
+    🚚 Distribuidora MJB | Productos de limpieza, hogar y consumo
 
 </div>
 
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+
+<div class="top-header">
+
+
+<!-- LOGO -->
+
+<div class="logo">
+
+<img src="imagenes/logopng (1).png" alt="Logo MJB">
+
+</div>
+
+
+
+<!-- BUSCADOR -->
+
 <div class="search">
 
-<input type="text" placeholder="Buscar productos...">
+<input 
+type="text" 
+id="buscar"
+placeholder="Buscar productos..."
+>
+
 
 <button>
 
@@ -43,179 +67,412 @@
 
 </div>
 
+
+
+
+<!-- ICONOS -->
+
 <div class="icons">
 
-<div class="icon">
 
-<i class="fa-regular fa-user"></i>
+<div class="contact-icons">
 
-<span>Mi cuenta</span>
+
+<a href="mailto:ventas@mjbspa.cl">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+
+<a href="https://instagram.com/mjbspa" target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
 
 </div>
 
-<div class="icon cart">
+<div class="icon cart" id="abrirCarrito">
+
 
 <i class="fa-solid fa-cart-shopping"></i>
 
-<span>Carrito</span>
 
-<div class="count">0</div>
+<span>
+Carrito
+</span>
+
+
+<div class="count" id="cart-count">
+0
+</div>
+
 
 </div>
 
-</div>
 
 </div>
 
-<nav>
+
+</div>
+
+
+
+
+
+<!-- MENU MOVIL -->
+
+<div class="menu-toggle">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+
+
+
+
+<nav id="menu">
+
 
 <ul>
 
-<li><a href="#">Inicio</a></li>
 
-<li><a href="#">Productos</a></li>
+<li>
+<a href="#">
+Inicio
+</a>
+</li>
 
-<li><a href="#">Categorías</a></li>
 
-<li><a href="#">Ofertas</a></li>
+<li>
+<a href="#productos">
+Productos
+</a>
+</li>
 
-<li><a href="#">Nosotros</a></li>
 
-<li><a href="#">Contacto</a></li>
+<li>
+<a href="#categorias">
+Categorías
+</a>
+</li>
+
+
+<li>
+<a href="#contacto">
+Contacto
+</a>
+</li>
+
 
 </ul>
 
+
 </nav>
+
 
 </header>
 
-<!--================ BANNER =================-->
+
+
+
+<!-- ================= CARRITO LATERAL ================= -->
+
+
+<div class="carrito-panel" id="carritoPanel">
+
+
+<div class="carrito-header">
+
+
+<h2>
+Mi carrito
+</h2>
+
+
+<button id="cerrarCarrito">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+</div>
+
+
+
+<div id="listaCarrito">
+
+
+<p>
+Tu carrito está vacío
+</p>
+
+
+</div>
+
+
+
+<div class="carrito-total">
+
+
+Total:
+
+<strong id="total">
+$0
+</strong>
+
+
+</div>
+
+<div class="datos-cliente">
+
+<h3>
+Datos del pedido
+</h3>
+
+
+<input 
+type="text" 
+id="nombreCliente" 
+placeholder="Nombre completo"
+>
+
+
+
+<input 
+type="tel" 
+id="telefonoCliente" 
+placeholder="Teléfono"
+>
+
+
+
+
+<input 
+type="text" 
+id="direccionCliente" 
+placeholder="Dirección de entrega"
+>
+
+
+
+
+<select id="pagoCliente">
+
+<option value="">
+Forma de pago
+</option>
+
+<option value="Efectivo">
+Efectivo
+</option>
+
+<option value="Transferencia">
+Transferencia
+</option>
+
+<option value="Tarjeta">
+Tarjeta
+</option>
+
+
+</select>
+
+
+
+<button id="whatsappBtn" class="whatsapp-btn">
+
+Enviar pedido por WhatsApp
+
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+<!-- ================= BANNER SLIDER ================= -->
+
 
 <section class="banner">
 
-<div class="slider">
+<section class="slider">
 
-<div class="slide active">
+    <div class="slides">
 
-<img src="img/banner1.jpg">
+        <div class="slide">
+            <img src="imagenes/inicio1.png" alt="Producto 1">
+        </div>
 
-</div>
+        <div class="slide">
+            <img src="imagenes/inicio2.png" alt="Producto 2">
+        </div>
 
-<div class="slide">
+        <div class="slide">
+            <img src="imagenes/inicio3.png" alt="Producto 3">
+        </div>
 
-<img src="img/banner2.jpg">
+    </div>
 
-</div>
 
-<div class="slide">
+    <button class="btn prev" id="prev">&#10094;</button>
 
-<img src="img/banner3.jpg">
+    <button class="btn next" id="next">&#10095;</button>
 
-</div>
-
-<button id="prev">
-
-❮
-
-</button>
-
-<button id="next">
-
-❯
-
-</button>
-
-</div>
 
 </section>
 
-<!--================ CATEGORÍAS =================-->
-
-<section class="categories">
-
-<div class="title">
-
-<h2>Categorías</h2>
-
-</div>
-
-<div class="category-grid">
-
-<div class="category-card">
-
-<img src="img/categorias/limpieza.png">
-
-<p>Limpieza del hogar</p>
-
-</div>
-
-<div class="category-card">
-
-<img src="img/categorias/papeleria.png">
-
-<p>Papelería e higiene</p>
-
-</div>
-
-<div class="category-card">
-
-<img src="img/categorias/alimentos.png">
-
-<p>Alimentos</p>
-
-</div>
-
-<div class="category-card">
-
-<img src="img/categorias/bebidas.png">
-
-<p>Bebidas</p>
-
-</div>
-
-<div class="category-card">
-
-<img src="img/categorias/personal.png">
-
-<p>Cuidado personal</p>
-
-</div>
-
-<div class="category-card">
-
-<img src="img/categorias/mascotas.png">
-
-<p>Mascotas</p>
-
-</div>
-
-<div class="category-card">
-
-<img src="img/categorias/empresa.png">
-
-<p>Insumos Empresas</p>
-
-</div>
-
-</div>
-
 </section>
 
-<!--================ PRODUCTOS =================-->
 
-<section class="products">
+
+<!-- ================= CATEGORÍAS ================= -->
+
+
+<section class="categories" id="categorias">
+
 
 <div class="section-title">
 
-<h2>Productos destacados</h2>
+<h2>
+Categorías
+</h2>
 
 </div>
 
+
+
+
+<div class="category-grid">
+
+
+
+
+
+<div class="category-card">
+
+
+<img src="img/categorias/limpieza.png" alt="Limpieza">
+
+
+<a href="limpieza.html">
+
+<img src="img/categorias/limpieza.png" alt="Limpieza">
+
+<h3>
+Limpieza del hogar
+</h3>
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="category-card">
+
+
+<img src="img/categorias/alimentos.png" alt="Abarrotes">
+
+
+<h3>
+Abarrotes
+</h3>
+
+
+</div>
+
+
+
+
+
+
+<div class="category-card">
+
+
+<img src="img/categorias/papeleria.png" alt="Higiene">
+
+
+<h3>
+Higiene
+</h3>
+
+
+</div>
+
+
+
+
+
+
+<div class="category-card">
+
+
+<img src="imagenes/MASTER_DOG_ADULTO_CARNE.png" alt="Mascotas">
+
+
+<h3>
+Mascotas
+</h3>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTOS ================= -->
+
+
+<section class="products" id="productos">
+
+
+
+<div class="section-title">
+
+<h2>
+Productos destacados
+</h2>
+
+</div>
+
+
+
+
 <div class="product-grid">
 
-<!-- Producto -->
+
+
+
+
+<!-- PRODUCTO 1 -->
+
 
 <div class="product">
+
 
 <span class="stock">
 
@@ -223,189 +480,855 @@ Disponible
 
 </span>
 
-<img src="img/productos/1.png">
 
-<h3>Lavandina 5L</h3>
 
-<p>Cloro Activo</p>
+<img src="img/productos/1.png" alt="Lavandina">
 
-<h4>$1.890</h4>
+
+
+<h3>
+Lavandina 5L
+</h3>
+
+
+
+<p>
+Cloro activo
+</p>
+
+
+
+<h4>
+$1.890
+</h4>
+
+
+
 
 <div class="quantity">
 
-<button>-</button>
 
-<input type="text" value="1">
+<button onclick="restarCantidad(0)">
 
-<button>+</button>
+-
+
+</button>
+
+
+
+<input 
+type="number" 
+id="cantidad0"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(0)">
+
++
+
+</button>
+
 
 </div>
 
-<button class="cart-btn">
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Lavandina 5L',1890,0)"
+>
+
+
+Agregar al carrito
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PRODUCTO 2 -->
+
+
+<div class="product">
+
+
+<span class="stock">
+
+Disponible
+
+</span>
+
+
+
+<img src="img/productos/2.png" alt="Producto">
+
+
+
+<h3>
+Detergente Quix
+</h3>
+
+
+
+<p>
+Limpieza de cocina
+</p>
+
+
+
+<h4>
+$1.290
+</h4>
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(1)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad1"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(1)">
++
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Detergente Quix',1290,1)"
+>
+
+
+Agregar al carrito
+
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- PRODUCTO 3 -->
+
+
+<div class="product">
+
+
+<span class="stock">
+
+Disponible
+
+</span>
+
+
+
+<img src="img/productos/3.png" alt="Producto">
+
+
+
+<h3>
+Papel Higiénico Elite
+</h3>
+
+
+
+<p>
+Pack familiar
+</p>
+
+
+
+<h4>
+$2.490
+</h4>
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(2)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad2"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(2)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Papel Higiénico Elite',2490,2)"
+>
+
+
+Agregar al carrito
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- ================= MÁS PRODUCTOS ================= -->
+
+
+<section class="products more-products">
+
+
+<div class="product-grid">
+
+
+
+<!-- PRODUCTO 4 -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="img/productos/4.png" alt="Producto">
+
+
+<h3>
+Arroz Tucapel
+</h3>
+
+
+<p>
+Grano largo
+</p>
+
+
+<h4>
+$1.790
+</h4>
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(3)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad3"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(3)">
++
+</button>
+
+
+</div>
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Arroz Tucapel',1790,3)"
+>
 
 Agregar al carrito
 
 </button>
 
-</div>
-
-<!-- Duplicar este bloque para todos los productos -->
 
 </div>
+
+
+
+
+
+
+<!-- PRODUCTO 5 -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="img/productos/5.png" alt="Producto">
+
+
+<h3>
+Café
+</h3>
+
+
+<p>
+Café instantáneo
+</p>
+
+
+<h4>
+$3.490
+</h4>
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(4)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad4"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(4)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Café',3490,4)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- PRODUCTO 6 -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="img/productos/6.png" alt="Producto">
+
+
+<h3>
+Azúcar
+</h3>
+
+
+<p>
+Azúcar granulada
+</p>
+
+
+<h4>
+$1.390
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(5)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad5"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(5)">
++
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Azúcar',1390,5)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
-<!--================ MARCAS =================-->
+
+
+
+
+
+
+<!-- ================= MARCAS ================= -->
+
 
 <section class="brands">
 
-<h2>Marcas que distribuimos</h2>
+
+<div class="section-title">
+
+<h2>
+Marcas que distribuimos
+</h2>
+
+</div>
+
+
 
 <div class="brand-slider">
 
-<img src="img/marcas/omo.png">
 
-<img src="img/marcas/poett.png">
+<img src="img/marcas/omo.png" alt="Omo">
 
-<img src="img/marcas/elite.png">
 
-<img src="img/marcas/virutex.png">
+<img src="img/marcas/poett.png" alt="Poett">
 
-<img src="img/marcas/quix.png">
 
-<img src="img/marcas/arom.png">
+<img src="img/marcas/elite.png" alt="Elite">
+
+
+<img src="img/marcas/virutex.png" alt="Virutex">
+
+
+<img src="img/marcas/quix.png" alt="Quix">
+
+
+<img src="img/marcas/arom.png" alt="Arom">
+
 
 </div>
 
+
 </section>
 
-<!--================ OFERTAS =================-->
+
+
+
+
+
+
+<!-- ================= OFERTAS ================= -->
+
 
 <section class="offers">
 
-<div class="offer-title">
 
-<h2>Ofertas imperdibles</h2>
+
+<div class="section-title">
+
+<h2>
+Ofertas imperdibles
+</h2>
 
 </div>
+
+
+
 
 <div class="offer-grid">
 
+
+
+
+
 <div class="offer-card">
+
 
 <img src="img/ofertas/1.png">
 
-<h3>Lavandina 2L</h3>
 
-<span>$1.090</span>
+<h3>
+Lavandina 2L
+</h3>
+
+
+<span>
+$1.090
+</span>
+
 
 </div>
 
+
+
+
+
+
 <div class="offer-card">
+
 
 <img src="img/ofertas/2.png">
 
-<h3>Poett</h3>
 
-<span>$2.390</span>
+<h3>
+Poett
+</h3>
+
+
+<span>
+$2.390
+</span>
+
 
 </div>
 
+
+
+
+
+
 <div class="offer-card">
+
 
 <img src="img/ofertas/3.png">
 
-<h3>Papel Elite</h3>
 
-<span>$1.790</span>
+<h3>
+Papel Elite
+</h3>
+
+
+<span>
+$1.790
+</span>
+
 
 </div>
+
+
+
+
+
 
 <div class="offer-card">
 
+
 <img src="img/ofertas/4.png">
 
-<h3>OMO</h3>
 
-<span>$2.190</span>
+<h3>
+OMO
+</h3>
+
+
+<span>
+$2.190
+</span>
+
 
 </div>
 
+
+
 </div>
+
 
 </section>
 
-<!--================ FOOTER =================-->
 
-<footer>
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer id="contacto">
+
+
 
 <div class="footer-container">
 
-<div>
 
-<img src="img/logo.png">
+
+
+
+<div class="footer-logo">
+
+
+<img src="imagenes/logopng.png" alt="MJB">
+
 
 <p>
 
-Importamos y distribuimos productos de limpieza.
+Importamos y distribuimos productos de limpieza y consumo.
 
 </p>
 
+
 </div>
+
+
+
+
+
+
 
 <div>
 
-<h3>Enlaces</h3>
+
+<h3>
+Enlaces
+</h3>
+
 
 <ul>
 
-<li>Inicio</li>
 
-<li>Productos</li>
+<li>
+Inicio
+</li>
 
-<li>Categorías</li>
 
-<li>Contacto</li>
+<li>
+Productos
+</li>
+
+
+<li>
+Categorías
+</li>
+
+
+<li>
+Contacto
+</li>
+
 
 </ul>
 
+
 </div>
+
+
+
+
+
+
+
 
 <div>
 
-<h3>Ayuda</h3>
+
+<h3>
+Ayuda
+</h3>
+
 
 <ul>
 
-<li>Preguntas frecuentes</li>
 
-<li>Envíos</li>
+<li>
+Preguntas frecuentes
+</li>
 
-<li>Devoluciones</li>
 
-<li>Términos</li>
+<li>
+Envíos
+</li>
+
+
+<li>
+Devoluciones
+</li>
+
+
+<li>
+Términos y condiciones
+</li>
+
 
 </ul>
 
+
 </div>
+
+
+
+
+
+
 
 <div>
 
-<h3>Contáctanos</h3>
 
-<p>+56 9 1234 5678</p>
+<h3>
+Contáctanos
+</h3>
 
-<p>ventas@mjbspa.cl</p>
 
-<p>Santiago, Chile</p>
+<p>
+📞 +56 9 1234 5678
+</p>
+
+
+<p>
+✉ ventas@mjbspa.cl
+</p>
+
+
+<p>
+📍 Santiago, Chile
+</p>
+
 
 </div>
 
+
+
+
+
 </div>
+
+
+
+
+<div class="copyright">
+
+
+© 2026 MJB - Todos los derechos reservados
+
+
+</div>
+
+
 
 </footer>
 
-<script src="js/script.js"></script>
+
+
+
+<a 
+href="https://wa.me/56964240040" 
+class="whatsapp-float" 
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- JAVASCRIPT -->
+
+
+<script src="script.js"></script>
+
+
 
 </body>
+
 </html>

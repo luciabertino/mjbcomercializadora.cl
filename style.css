@@ -1986,3 +1986,246 @@ nav ul{
 }
 
 
+
+
+
+
+
+
+
+/* ================= CELULAR - AJUSTE FINAL ================= */
+
+@media (max-width: 600px){
+
+    /* HEADER */
+
+    .top-header{
+        width:94%;
+        display:grid;
+        grid-template-columns:1fr auto;
+        align-items:center;
+        gap:12px;
+        padding:12px 0;
+    }
+
+    .logo{
+        justify-self:start;
+    }
+
+    .logo img{
+        width:120px;
+    }
+
+    .icons{
+        justify-self:end;
+        gap:14px;
+        font-size:18px;
+    }
+
+    .cart span{
+        display:none;
+    }
+
+    /* BUSCADOR */
+
+    .search{
+        grid-column:1 / -1;
+        width:100%;
+        max-width:none;
+    }
+
+    .search input{
+        min-width:0;
+        padding:12px 15px;
+        font-size:14px;
+    }
+
+    .search button{
+        width:50px;
+    }
+
+
+    /* MENÚ */
+
+    .menu-categorias ul,
+    nav ul{
+        display:flex;
+        flex-direction:row;
+        justify-content:flex-start;
+        gap:25px;
+        padding:12px 20px;
+        overflow-x:auto;
+        white-space:nowrap;
+        scrollbar-width:none;
+    }
+
+    .menu-categorias ul::-webkit-scrollbar,
+    nav ul::-webkit-scrollbar{
+        display:none;
+    }
+
+    .menu-categorias a,
+    nav a{
+        font-size:14px;
+    }
+
+
+    /* BANNER */
+
+    .banner{
+        width:94%;
+        margin:20px auto;
+    }
+
+    .slider{
+        width:100%;
+        margin:0;
+        border-radius:15px;
+    }
+
+    .slide img{
+        width:100%;
+        height:auto;
+        aspect-ratio:1983 / 793;
+        object-fit:cover;
+    }
+
+    .btn{
+        width:32px;
+        height:32px;
+        font-size:16px;
+    }
+
+    .prev{
+        left:8px;
+    }
+
+    .next{
+        right:8px;
+    }
+
+
+    /* TITULOS */
+
+    .section-title{
+        margin:40px 0 25px;
+    }
+
+    .section-title h2{
+        font-size:24px;
+    }
+
+
+    /* CATEGORÍAS */
+
+    .categories{
+        width:94%;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+
+    /* PRODUCTOS */
+
+    .products{
+        width:94%;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .product{
+        width:100%;
+        min-height:350px;
+        padding:20px;
+    }
+
+    .product img{
+        height:170px;
+    }
+
+
+    /* OFERTAS */
+
+    .offers{
+        width:94%;
+    }
+
+    .offer-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+
+    /* MARCAS */
+
+    .brands{
+        width:94%;
+    }
+
+    .brand-slider{
+        gap:15px;
+    }
+
+    .brand-slider img{
+        width:80px;
+        height:80px;
+    }
+
+
+    /* PRECIO COMERCIANTE */
+
+    .comerciante{
+        width:94%;
+        padding:25px 18px;
+    }
+
+    .comerciante h2{
+        font-size:22px;
+    }
+
+    .comerciante p{
+        font-size:14px;
+    }
+
+
+    /* CARRITO */
+
+    .carrito-panel{
+        width:100%;
+        right:-100%;
+        padding:20px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container{
+        width:90%;
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:30px;
+    }
+
+    .footer-logo img{
+        margin:0 auto 15px;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp-float{
+        width:52px;
+        height:52px;
+        right:15px;
+        bottom:15px;
+        font-size:26px;
+    }
+
+}
+

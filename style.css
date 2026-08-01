@@ -109,23 +109,14 @@ header{
 
 
 .top-header{
-
-    width:92%;
-
+    width:95%;
+    max-width:1400px;
     margin:auto;
-
     display:flex;
-
     align-items:center;
-
-    justify-content:space-between;
-
     gap:25px;
-
-    padding:18px 0;
-
+    padding:10px 0;
 }
-
 
 
 
@@ -137,7 +128,7 @@ header{
 
 .logo img{
 
-    width:170px;
+    width:150px;
 
 }
 
@@ -211,17 +202,11 @@ header{
 
 
 .icons{
-
     display:flex;
-
     align-items:center;
-
     gap:20px;
-
     color:white;
-
     font-size:20px;
-
 }
 
 
@@ -302,49 +287,29 @@ header{
 
 /* ================= MENU ================= */
 
-
-nav{
-
-    background:var(--verde);
-
+.menu-principal{
+    flex:1;
 }
 
-
-
-nav ul{
-
+.menu-principal ul{
     list-style:none;
-
     display:flex;
-
+    align-items:center;
     justify-content:center;
-
-    gap:45px;
-
-    padding:15px;
-
+    gap:30px;
 }
 
-
-
-nav a{
-
+.menu-principal a{
     color:white;
-
     font-weight:600;
-
+    font-size:16px;
+    white-space:nowrap;
     transition:.3s;
-
 }
 
-
-
-nav a:hover{
-
+.menu-principal a:hover{
     color:var(--dorado);
-
 }
-
 
 /* ================= SLIDER ================= */
 
@@ -1948,5 +1913,76 @@ nav ul{
 }
 
 
+
+/* ================= HEADER PÁGINAS DE CATEGORÍAS ================= */
+
+.menu-categorias{
+    background:var(--verde);
+}
+
+.menu-categorias ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:45px;
+    padding:8px 5px;
+}
+
+.menu-categorias a{
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu-categorias a:hover{
+    color:var(--dorado);
+}
+
+
+
+/* ================= CENTRAR HEADER CATEGORÍAS ================= */
+
+.menu-categorias{
+    background:var(--verde);
+}
+
+.menu-categorias ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:45px;
+    padding:8px 5px;
+}
+
+.menu-categorias a{
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.menu-categorias a:hover{
+    color:var(--dorado);
+}
+
+
+/* CENTRAR LOGO + BUSCADOR + ICONOS */
+
+.top-header{
+    justify-content:center;
+}
+
+.top-header .logo{
+    flex:0 0 auto;
+}
+
+.top-header .search{
+    flex:0 1 650px;
+}
+
+.top-header .icons{
+    flex:0 0 auto;
+}
 
 

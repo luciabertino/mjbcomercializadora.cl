@@ -523,39 +523,449 @@ if(cerrarCarrito && carritoPanel){
 // ================= BUSCADOR =================
 
 
-
 const buscador = document.getElementById("buscar");
 
+const botonBuscar = document.querySelector(".search button");
 
 
-if(buscador){
+// Categorías donde están todos los productos
+
+const paginasProductos = [
+
+    "limpieza.html",
+    "abarrotes.html",
+    "higiene.html",
+    "mascotas.html"
+
+];
+
+
+// Detectar en qué página estamos
+
+const paginaActual =
+
+    window.location.pathname.split("/").pop() || "index.html";
 
 
 
-    buscador.addEventListener("keyup",()=>{
+// -------------------------------------------------
+// NORMALIZAR TEXTO
+// Permite buscar sin preocuparse por mayúsculas,
+// tildes o acentos.
+// -------------------------------------------------
 
+function normalizarTexto(texto){
 
-        let texto = buscador.value.toLowerCase().trim();
-
-
-
-        // Más adelante aquí conectaremos productos.js
-
-
-
-        console.log("Buscando:", texto);
-
-
-
-    });
-
-
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g,"")
+        .trim();
 
 }
 
 
 
+// -------------------------------------------------
+// MOSTRAR PRODUCTOS DE LA PÁGINA ACTUAL
+// -------------------------------------------------
 
+function filtrarProductosActuales(texto){
+
+    const productos = document.querySelectorAll(".product");
+
+    let encontrados = 0;
+
+
+    productos.forEach(producto => {
+
+        const contenido =
+            normalizarTexto(producto.textContent);
+
+
+        if(contenido.includes(normalizarTexto(texto))){
+
+            producto.style.display = "";
+
+            encontrados++;
+
+        }else{
+
+            producto.style.display = "none";
+
+        }
+
+    });
+
+
+    mostrarMensajeBusqueda(encontrados, texto);
+
+
+    return encontrados;
+
+}
+
+
+
+// -------------------------------------------------
+// MENSAJE DE BÚSQUEDA
+// -------------------------------------------------
+
+function mostrarMensajeBusqueda(cantidad, texto){
+
+    let mensaje =
+        document.getElementById("mensajeBusqueda");
+
+
+    if(!mensaje){
+
+        mensaje = document.createElement("p");
+
+        mensaje.id = "mensajeBusqueda";
+
+        mensaje.style.textAlign = "center";
+
+        mensaje.style.fontSize = "18px";
+
+        mensaje.style.margin = "30px";
+
+        mensaje.style.color = "#063d2d";
+
+        const productosSection =
+            document.querySelector(".products");
+
+
+        if(productosSection){
+
+            productosSection.appendChild(mensaje);
+
+        }
+
+    }
+
+
+    if(!texto){
+
+        mensaje.textContent = "";
+
+        return;
+
+    }
+
+
+    if(cantidad === 0){
+
+        mensaje.textContent =
+            "No encontramos productos con esa búsqueda.";
+
+    }else{
+
+        mensaje.textContent = "";
+
+    }
+
+}
+
+
+
+// -------------------------------------------------
+// LIMPIAR FILTRO
+// -------------------------------------------------
+
+function limpiarBusqueda(){
+
+    const productos =
+        document.querySelectorAll(".product");
+
+
+    productos.forEach(producto => {
+
+        producto.style.display = "";
+
+    });
+
+
+    const mensaje =
+        document.getElementById("mensajeBusqueda");
+
+
+    if(mensaje){
+
+        mensaje.textContent = "";
+
+    }
+
+}
+
+
+
+// -------------------------------------------------
+// BUSCAR EN OTRA PÁGINA
+// -------------------------------------------------
+
+async function buscarEnOtraPagina(texto){
+
+    const busqueda =
+        normalizarTexto(texto);
+
+
+    // Primero buscamos en las categorías
+
+    for(const pagina of paginasProductos){
+
+        // No necesitamos volver a buscar
+        // en la página donde ya estamos
+
+        if(pagina === paginaActual){
+
+            continue;
+
+        }
+
+
+        try{
+
+            const respuesta =
+                await fetch(pagina);
+
+
+            if(!respuesta.ok){
+
+                continue;
+
+            }
+
+
+            const html =
+                await respuesta.text();
+
+
+            const parser =
+                new DOMParser();
+
+
+            const documento =
+                parser.parseFromString(
+                    html,
+                    "text/html"
+                );
+
+
+            const productos =
+                documento.querySelectorAll(".product");
+
+
+            let encontrado = false;
+
+
+            productos.forEach(producto => {
+
+                const contenido =
+                    normalizarTexto(
+                        producto.textContent
+                    );
+
+
+                if(contenido.includes(busqueda)){
+
+                    encontrado = true;
+
+                }
+
+            });
+
+
+            // Si encontró el producto,
+            // vamos a esa categoría
+
+            if(encontrado){
+
+                window.location.href =
+                    pagina +
+                    "?buscar=" +
+                    encodeURIComponent(texto);
+
+                return;
+
+            }
+
+
+        }catch(error){
+
+            console.log(
+                "No se pudo revisar " + pagina,
+                error
+            );
+
+        }
+
+    }
+
+
+    // -------------------------------------------------
+    // SI NO ENCONTRÓ NADA
+    // -------------------------------------------------
+
+    mostrarMensajeBusqueda(0, texto);
+
+}
+
+
+
+// -------------------------------------------------
+// REALIZAR BÚSQUEDA
+// -------------------------------------------------
+
+async function realizarBusqueda(){
+
+    if(!buscador){
+
+        return;
+
+    }
+
+
+    const texto =
+        buscador.value.trim();
+
+
+    // Si está vacío
+
+    if(texto === ""){
+
+        limpiarBusqueda();
+
+        return;
+
+    }
+
+
+    // Primero busca en la página actual
+
+    const encontrados =
+        filtrarProductosActuales(texto);
+
+
+    // Si encontró productos aquí,
+    // NO cambia de página.
+
+    if(encontrados > 0){
+
+        return;
+
+    }
+
+
+    // Si no encontró aquí,
+    // busca en las otras categorías.
+
+    await buscarEnOtraPagina(texto);
+
+}
+
+
+
+// -------------------------------------------------
+// BUSCAR MIENTRAS ESCRIBES
+// -------------------------------------------------
+
+if(buscador){
+
+    buscador.addEventListener("input",()=>{
+
+        const texto =
+            buscador.value.trim();
+
+
+        if(texto === ""){
+
+            limpiarBusqueda();
+
+            return;
+
+        }
+
+
+        // Mientras escribe solamente
+        // filtramos la página actual.
+
+        filtrarProductosActuales(texto);
+
+    });
+
+}
+
+
+
+// -------------------------------------------------
+// BOTÓN DE LA LUPA
+// -------------------------------------------------
+
+if(botonBuscar){
+
+    botonBuscar.addEventListener("click",()=>{
+
+        realizarBusqueda();
+
+    });
+
+}
+
+
+
+// -------------------------------------------------
+// ENTER
+// -------------------------------------------------
+
+if(buscador){
+
+    buscador.addEventListener("keydown",(e)=>{
+
+        if(e.key === "Enter"){
+
+            e.preventDefault();
+
+            realizarBusqueda();
+
+        }
+
+    });
+
+}
+
+
+
+// -------------------------------------------------
+// RECIBIR BÚSQUEDA DESDE OTRA CATEGORÍA
+// -------------------------------------------------
+
+const parametros =
+    new URLSearchParams(window.location.search);
+
+
+const busquedaRecibida =
+    parametros.get("buscar");
+
+
+
+if(busquedaRecibida && buscador){
+
+    buscador.value =
+        busquedaRecibida;
+
+
+    // Esperamos un poquito para asegurarnos
+    // de que los productos ya estén cargados.
+
+    setTimeout(()=>{
+
+        filtrarProductosActuales(
+            busquedaRecibida
+        );
+
+    },100);
+
+}
 
 
 
@@ -614,6 +1024,8 @@ if(whatsappBtn){
 
 
 
+
+
         carrito.forEach(producto=>{
 
 
@@ -624,6 +1036,7 @@ if(whatsappBtn){
 
 
         });
+
 
 
 
@@ -645,9 +1058,11 @@ if(whatsappBtn){
 
 
 
+
+
         window.open(
 
-            "https://wa.me/56964240040?text=" + mensaje,
+            "https://wa.me/56984996669?text=" + mensaje,
 
             "_blank"
 

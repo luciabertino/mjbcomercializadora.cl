@@ -55,335 +55,127 @@
 
 <!-- ================= HEADER ================= -->
 
-
 <header>
 
-
+```
 <div class="top-header">
 
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img src="imagenes/mjb.png" alt="Logo MJB">
+
+        </a>
+
+    </div>
 
 
-<!-- LOGO -->
+    <!-- BUSCADOR -->
+
+    <div class="search">
+
+        <input
+            type="text"
+            id="buscar"
+            placeholder="Buscar productos..."
+        >
+
+        <button type="button">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </button>
+
+    </div>
 
 
-<div class="logo">
+    <!-- ICONOS -->
+
+    <div class="icons">
+
+        <!-- GMAIL -->
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mjbcomercializadora@gmail.com" target="_blank">
+    <i class="fa-solid fa-envelope"></i>
+</a>
 
 
-<img src="imagenes/mjb.png" alt="Logo MJB">
+        <!-- INSTAGRAM -->
 
+        <a href="https://instagram.com/mjb_comercializadora" target="_blank">
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+
+        <!-- CARRITO -->
+
+        <div class="cart" id="abrirCarrito">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span>
+                Carrito
+            </span>
+
+            <div class="count" id="cart-count">
+                0
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
 
-
-
-
-
-
-<!-- BUSCADOR -->
-
-
-<div class="search">
-
-
-<input 
-type="text"
-id="buscar"
-placeholder="Buscar productos..."
->
-
-
-<button>
-
-<i class="fa-solid fa-magnifying-glass"></i>
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-<!-- ICONOS -->
-
-
-<div class="icons">
-
-
-<a href="mailto:ventas@mjbspa.cl">
-
-<i class="fa-solid fa-envelope"></i>
-
-</a>
-
-
-
-
-<a href="https://instagram.com/mjbspa" target="_blank">
-
-<i class="fa-brands fa-instagram"></i>
-
-</a>
-
-
-
-
-
-
-
-<div class="cart" id="abrirCarrito">
-
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-
-<span>
-Carrito
-</span>
-
-
-<div class="count" id="cart-count">
-
-0
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- MENU -->
-
-
-<nav>
-
-
-<ul>
-
-
-<li>
-<a href="index.html">
-Inicio
-</a>
-</li>
-
-
-<li>
-<a href="limpieza.html">
-Limpieza
-</a>
-</li>
-
-
-<li>
-<a href="abarrotes.html">
-Abarrotes
-</a>
-</li>
-
-
-<li>
-<a href="higiene.html">
-Higiene
-</a>
-</li>
-
-
-<li>
-<a href="mascotas.html">
-Mascotas
-</a>
-</li>
-
-
-</ul>
-
+<!-- MENU DE CATEGORÍAS -->
+
+<nav class="menu-categorias">
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Inicio
+            </a>
+        </li>
+
+        <li>
+            <a href="limpieza.html">
+                Limpieza
+            </a>
+        </li>
+
+        <li>
+            <a href="abarrotes.html">
+                Abarrotes
+            </a>
+        </li>
+
+        <li>
+            <a href="higiene.html">
+                Higiene
+            </a>
+        </li>
+
+        <li>
+            <a href="mascotas.html">
+                Mascotas
+            </a>
+        </li>
+
+    </ul>
 
 </nav>
-
-
+```
 
 </header>
 
-<!-- ================= CARRITO LATERAL ================= -->
-
-
-<div class="carrito-panel" id="carritoPanel">
-
-
-
-<div class="carrito-header">
-
-
-<h2>
-Mi carrito
-</h2>
-
-
-
-<button id="cerrarCarrito">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-<div id="listaCarrito">
-
-
-<p>
-Tu carrito está vacío
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="carrito-total">
-
-
-Total:
-
-<strong id="total">
-
-$0
-
-</strong>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<div class="datos-cliente">
-
-
-<h3>
-Datos del pedido
-</h3>
-
-
-
-
-
-<input 
-type="text"
-id="nombreCliente"
-placeholder="Nombre completo"
->
-
-
-
-
-
-<input 
-type="tel"
-id="telefonoCliente"
-placeholder="Teléfono"
->
-
-
-
-
-
-<input 
-type="text"
-id="direccionCliente"
-placeholder="Dirección"
->
-
-
-
-
-
-
-
-<select id="pagoCliente">
-
-
-<option>
-Forma de pago
-</option>
-
-
-<option>
-Efectivo
-</option>
-
-
-<option>
-Transferencia
-</option>
-
-
-<option>
-Tarjeta
-</option>
-
-
-</select>
-
-
-
-
-
-
-
-
-<button class="whatsapp-btn" id="whatsappBtn">
-
-Enviar pedido por WhatsApp
-
-</button>
-
-
-
-</div>
-
-
-
-</div>
 
 
 
@@ -420,6 +212,322 @@ Productos de Mascotas
 
 
 
+<!-- ================= PRODUCTO 62 ================= -->
+
+<div class="product">
+
+<span class="stock">
+Disponible
+</span>
+
+<img src="imagenesmascotas/perro24.jpeg" alt="Master Dog Cachorro 18kg">
+
+<h3>
+Master Dog
+</h3>
+
+<p>
+Alimento para perro cachorro 18kg
+</p>
+
+<h4>
+$29.990
+</h4>
+
+<div class="quantity">
+
+<button onclick="restarCantidad(62)">
+-
+</button>
+
+<input
+type="number"
+id="cantidad62"
+value="1"
+min="1"
+>
+
+<button onclick="sumarCantidad(62)">
++
+</button>
+
+</div>
+
+<button
+class="cart-btn"
+onclick="agregarCarrito('Master Dog Cachorro 18kg',29990,62)"
+>
+
+Agregar al carrito
+
+</button>
+
+</div>
+
+
+<!-- ================= PRODUCTO 63 ================= -->
+
+<div class="product">
+
+<span class="stock">
+Disponible
+</span>
+
+<img src="imagenesmascotas/perro37.jpeg"Master Dog Adulto Carne 18kg">
+
+<h3>
+Master Dog
+</h3>
+
+<p>
+Alimento para perro adulto carne 18kg
+</p>
+
+<h4>
+$29.990
+</h4>
+
+<div class="quantity">
+
+<button onclick="restarCantidad(63)">
+-
+</button>
+
+<input
+type="number"
+id="cantidad63"
+value="1"
+min="1"
+>
+
+<button onclick="sumarCantidad(63)">
++
+</button>
+
+</div>
+
+<button
+class="cart-btn"
+onclick="agregarCarrito('Master Dog Adulto Carne 18kg',29990,63)"
+>
+
+Agregar al carrito
+
+</button>
+
+</div>
+
+
+<!-- ================= PRODUCTO 64 ================= -->
+
+<div class="product">
+
+<span class="stock">
+Disponible
+</span>
+
+<img src="imagenesmascotas/perro32.jpeg" alt="Master Dog Adulto Raza Pequeña 18kg">
+
+<h3>
+Master Dog
+</h3>
+
+<p>
+Alimento para perro adulto raza pequeña 18kg
+</p>
+
+<h4>
+$29.990
+</h4>
+
+<div class="quantity">
+
+<button onclick="restarCantidad(64)">
+-
+</button>
+
+<input
+type="number"
+id="cantidad64"
+value="1"
+min="1"
+>
+
+<button onclick="sumarCantidad(64)">
++
+</button>
+
+</div>
+
+<button
+class="cart-btn"
+onclick="agregarCarrito('Master Dog Adulto Raza Pequeña 18kg',29990,64)"
+>
+
+Agregar al carrito
+
+</button>
+
+</div>
+
+
+<!-- ================= PRODUCTO 65 ================= -->
+
+<div class="product">
+
+<span class="stock">
+Disponible
+</span>
+
+<img src="imagenesmascotas/perro35.jpeg" alt="Master Dog Senior 18kg">
+
+<h3>
+Master Dog
+</h3>
+
+<p>
+Alimento para perro senior 18kg
+</p>
+
+<h4>
+$29.990
+</h4>
+
+<div class="quantity">
+
+<button onclick="restarCantidad(65)">
+-
+</button>
+
+<input
+type="number"
+id="cantidad65"
+value="1"
+min="1"
+>
+
+<button onclick="sumarCantidad(65)">
++
+</button>
+
+</div>
+
+<button
+class="cart-btn"
+onclick="agregarCarrito('Master Dog Senior 18kg',29990,65)"
+>
+
+Agregar al carrito
+
+</button>
+
+</div>
+
+
+<!-- ================= PRODUCTO 66 ================= -->
+
+<div class="product">
+
+<span class="stock">
+Disponible
+</span>
+
+<img src="imagenesmascotas/gato6.jpeg" alt="Master Cat Carne 20kg">
+
+<h3>
+Master Cat
+</h3>
+
+<p>
+Alimento para gato sabor carne 20kg
+</p>
+
+<h4>
+$45.900
+</h4>
+
+<div class="quantity">
+
+<button onclick="restarCantidad(66)">
+-
+</button>
+
+<input
+type="number"
+id="cantidad66"
+value="1"
+min="1"
+>
+
+<button onclick="sumarCantidad(66)">
++
+</button>
+
+</div>
+
+<button
+class="cart-btn"
+onclick="agregarCarrito('Master Cat Carne 20kg',45900,66)"
+>
+
+Agregar al carrito
+
+</button>
+
+</div>
+
+
+<!-- ================= PRODUCTO 67 ================= -->
+
+<div class="product">
+
+<span class="stock">
+Disponible
+</span>
+
+<img src="imagenesmascotas/gato4.jpeg" alt="Master Cat Salmón 20kg">
+
+<h3>
+Master Cat
+</h3>
+
+<p>
+Alimento para gato sabor salmón 20kg
+</p>
+
+<h4>
+$45.900
+</h4>
+
+<div class="quantity">
+
+<button onclick="restarCantidad(67)">
+-
+</button>
+
+<input
+type="number"
+id="cantidad67"
+value="1"
+min="1"
+>
+
+<button onclick="sumarCantidad(67)">
++
+</button>
+
+</div>
+
+<button
+class="cart-btn"
+onclick="agregarCarrito('Master Cat Salmón 20kg',45900,67)"
+>
+
+Agregar al carrito
+
+</button>
+
+</div>
 
 
 
@@ -448,7 +556,6 @@ Productos de Mascotas
 
 
 
-    
 
 
 </div>
@@ -503,9 +610,9 @@ Productos de Mascotas
 
             <h3>Contáctanos</h3>
 
-            <p>📞 +56 9 6424 0040</p>
-            <p>✉ ventas@mjbspa.cl</p>
-            <p>📍 Chile</p>
+            <p>📞 +56 9 8499 6669</p>
+            <p>✉ mjbcomercializadora@gmail.com</p>
+            <p>📍Chillán/Ñuble </p>
 
         </div>
 
@@ -519,7 +626,7 @@ Productos de Mascotas
 
 <!-- ================= WHATSAPP ================= -->
 
-<a href="https://wa.me/56964240040"
+<a href="https://wa.me/56984996669"
 class="whatsapp-float"
 target="_blank">
 

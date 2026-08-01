@@ -45,276 +45,188 @@
 
 
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
-
+```
 <div class="top-header">
 
+    <!-- LOGO -->
 
-<!-- LOGO -->
+    <div class="logo">
 
-<div class="logo">
+        <img src="imagenes/mjb.png" alt="Logo MJB">
 
-<img src="imagenes/mjb.png" alt="Logo MJB">
+    </div>
+
+
+    <!-- MENU -->
+
+    <nav class="menu-principal">
+
+        <ul>
+
+            <li>
+                <a href="#">Inicio</a>
+            </li>
+
+            <li>
+                <a href="#productos">Productos</a>
+            </li>
+
+            <li>
+                <a href="#categorias">Categorías</a>
+            </li>
+
+            <li>
+                <a href="#ofertas">Ofertas</a>
+            </li>
+
+            <li>
+                <a href="#contacto">Contacto</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ICONOS -->
+
+    <div class="icons">
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mjbcomercializadora@gmail.com" target="_blank">
+    <i class="fa-solid fa-envelope"></i>
+</a>
+
+
+        <a href="https://instagram.com/mjb_comercializadora" target="_blank">
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+
+        <!-- CARRITO -->
+
+        <div class="cart" id="abrirCarrito">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span>
+                Carrito
+            </span>
+
+            <div class="count" id="cart-count">
+                0
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
-
-
-
-<!-- BUSCADOR -->
-
-<div class="search">
-
-<input 
-type="text"
-id="buscar"
-placeholder="Buscar productos..."
->
-
-
-<button>
-
-<i class="fa-solid fa-magnifying-glass"></i>
-
-</button>
-
-
-</div>
-
-
-
-
-<!-- ICONOS -->
-
-<div class="icons">
-
-
-<a href="mailto:mjbcomercializadora@gmail.com">
-
-<i class="fa-solid fa-envelope"></i>
-
-</a>
-
-
-<a href="https://instagram.com/mjb_comercializadora" target="_blank">
-
-<i class="fa-brands fa-instagram"></i>
-
-</a>
-
-
-
-<!-- CARRITO -->
-
-<div class="cart" id="abrirCarrito">
-
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-
-<span>
-Carrito
-</span>
-
-
-<div class="count" id="cart-count">
-
-0
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-
-<!-- MENU -->
-
-<nav>
-
-
-<ul>
-
-
-<li>
-<a href="#">
-Inicio
-</a>
-</li>
-
-
-<li>
-<a href="#productos">
-Productos
-</a>
-</li>
-
-
-<li>
-<a href="#categorias">
-Categorías
-</a>
-</li>
-
-
-<li>
-<a href="#ofertas">
-Ofertas
-</a>
-</li>
-
-
-<li>
-<a href="#contacto">
-Contacto
-</a>
-</li>
-
-
-</ul>
-
-
-</nav>
-
+```
 
 </header>
 
-
-
-
-
-<!-- CARRITO LATERAL -->
-
+<!-- ================= CARRITO LATERAL ================= -->
 
 <div class="carrito-panel" id="carritoPanel">
 
-
+```
 <div class="carrito-header">
 
+    <h2>
+        Mi carrito
+    </h2>
 
-<h2>
-Mi carrito
-</h2>
+    <button id="cerrarCarrito">
 
+        <i class="fa-solid fa-xmark"></i>
 
-<button id="cerrarCarrito">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
+    </button>
 
 </div>
-
-
 
 
 <div id="listaCarrito">
 
-
-<p>
-Tu carrito está vacío
-</p>
-
+    <p>
+        Tu carrito está vacío
+    </p>
 
 </div>
-
-
 
 
 <div class="carrito-total">
 
+    Total:
 
-Total:
-
-<strong id="total">
-
-$0
-
-</strong>
-
+    <strong id="total">
+        $0
+    </strong>
 
 </div>
-
-
 
 
 <div class="datos-cliente">
 
+    <h3>
+        Datos del pedido
+    </h3>
 
-<h3>
-Datos del pedido
-</h3>
+    <input
+        type="text"
+        id="nombreCliente"
+        placeholder="Nombre completo"
+    >
 
+    <input
+        type="tel"
+        id="telefonoCliente"
+        placeholder="Teléfono"
+    >
 
-<input 
-type="text"
-id="nombreCliente"
-placeholder="Nombre completo"
->
+    <input
+        type="text"
+        id="direccionCliente"
+        placeholder="Dirección"
+    >
 
+    <select id="pagoCliente">
 
-<input 
-type="tel"
-id="telefonoCliente"
-placeholder="Teléfono"
->
+        <option>
+            Forma de pago
+        </option>
 
+        <option>
+            Efectivo
+        </option>
 
-<input 
-type="text"
-id="direccionCliente"
-placeholder="Dirección"
->
+        <option>
+            Transferencia
+        </option>
 
+        <option>
+            Tarjeta
+        </option>
 
-<select id="pagoCliente">
-
-
-<option>
-Forma de pago
-</option>
-
-
-<option>
-Efectivo
-</option>
-
-
-<option>
-Transferencia
-</option>
+    </select>
 
 
-<option>
-Tarjeta
-</option>
+    <button class="whatsapp-btn" id="whatsappBtn">
 
+        Enviar pedido por WhatsApp
 
-</select>
+    </button>
 
-
-
-<button class="whatsapp-btn" id="whatsappBtn">
-
-Enviar pedido por WhatsApp
-
-</button>
-
+</div>
+```
 
 </div>
 
-
-</div>
 
 <!-- ================= SLIDER ================= -->
 
@@ -444,7 +356,7 @@ Categorías
 <a href="limpieza.html">
 
 
-<img src="img/categorias/limpieza.png">
+<img src="imagenes/loglimpiza.jpeg">
 
 
 <h3>
@@ -468,8 +380,7 @@ Limpieza
 <a href="abarrotes.html">
 
 
-<img src="img/categorias/alimentos.png">
-
+<img src="imagenes/logabarrote.jpeg">
 
 <h3>
 Abarrotes
@@ -492,7 +403,7 @@ Abarrotes
 <a href="higiene.html">
 
 
-<img src="img/categorias/papeleria.png">
+<img src="imagenes/loghigiene.jpeg">
 
 
 <h3>
@@ -517,7 +428,7 @@ Higiene
 <a href="mascotas.html">
 
 
-<img src="imagenes/MASTER_DOG_ADULTO_CARNE.png">
+<img src="imagenes/logmascota.jpeg">
 
 
 <h3>
@@ -550,13 +461,8 @@ Mascotas
 
 ```
 <div class="section-title">
-
-    <h2>
-        Productos destacados
-    </h2>
-
+    <h2>Productos destacados</h2>
 </div>
-
 
 <div class="product-grid">
 
@@ -569,7 +475,10 @@ Mascotas
             Disponible
         </span>
 
-        <img src="imageneslimpieza/gomugomu.jpeg" alt="GomuGomu 5LT">
+        <img
+            src="imageneslimpieza/gomugomu.jpeg"
+            alt="GomuGomu 5LT"
+        >
 
         <h3>
             GomuGomu
@@ -582,7 +491,6 @@ Mascotas
         <h4>
             $2.200
         </h4>
-
 
         <div class="quantity">
 
@@ -603,18 +511,14 @@ Mascotas
 
         </div>
 
-
         <button
             class="cart-btn"
             onclick="agregarCarrito('GomuGomu 5lt',2200,38)"
         >
-
             Agregar al carrito
-
         </button>
 
     </div>
-
 
 
     <!-- ================= OVELLA XL ================= -->
@@ -625,7 +529,10 @@ Mascotas
             Disponible
         </span>
 
-        <img src="imageneslimpieza/ovellaxl.jpeg" alt="Ovella XL Toalla de papel">
+        <img
+            src="imageneslimpieza/ovellaxl.jpeg"
+            alt="Ovella XL Toalla de papel"
+        >
 
         <h3>
             Ovella XL
@@ -638,7 +545,6 @@ Mascotas
         <h4>
             $1.950
         </h4>
-
 
         <div class="quantity">
 
@@ -659,18 +565,14 @@ Mascotas
 
         </div>
 
-
         <button
             class="cart-btn"
             onclick="agregarCarrito('Ovella xl toalla de papel',1950,34)"
         >
-
             Agregar al carrito
-
         </button>
 
     </div>
-
 
 
     <!-- ================= QUIX ================= -->
@@ -681,7 +583,10 @@ Mascotas
             Disponible
         </span>
 
-        <img src="imageneslimpieza/quixultraazul.jpeg" alt="Quix UltraConcentrado 200ml">
+        <img
+            src="imageneslimpieza/quixultraazul.jpeg"
+            alt="Quix UltraConcentrado 200ml"
+        >
 
         <h3>
             Quix UltraConcentrado
@@ -694,7 +599,6 @@ Mascotas
         <h4>
             $1.400
         </h4>
-
 
         <div class="quantity">
 
@@ -715,18 +619,14 @@ Mascotas
 
         </div>
 
-
         <button
             class="cart-btn"
             onclick="agregarCarrito('Quix UltraConcentrado 200ml',1400,30)"
         >
-
             Agregar al carrito
-
         </button>
 
     </div>
-
 
 
     <!-- ================= CLORO 5LT ================= -->
@@ -737,7 +637,10 @@ Mascotas
             Disponible
         </span>
 
-        <img src="imageneslimpieza/cloro.jpeg" alt="Cloro 5LT">
+        <img
+            src="imageneslimpieza/cloro.jpeg"
+            alt="Cloro 5LT"
+        >
 
         <h3>
             Cloro 5LT
@@ -750,7 +653,6 @@ Mascotas
         <h4>
             $2.400
         </h4>
-
 
         <div class="quantity">
 
@@ -771,18 +673,14 @@ Mascotas
 
         </div>
 
-
         <button
             class="cart-btn"
             onclick="agregarCarrito('Cloro 5lt',2400,37)"
         >
-
             Agregar al carrito
-
         </button>
 
     </div>
-
 
 
     <!-- ================= AROMAX LAVANDA ================= -->
@@ -793,7 +691,10 @@ Mascotas
             Disponible
         </span>
 
-        <img src="imageneslimpieza/aromaxlavanda.jpeg" alt="Aromax Aroma Lavanda 1800cc">
+        <img
+            src="imageneslimpieza/aromaxlavanda.jpeg"
+            alt="Aromax Aroma Lavanda 1800cc"
+        >
 
         <h3>
             Aromax
@@ -806,7 +707,6 @@ Mascotas
         <h4>
             $1.550
         </h4>
-
 
         <div class="quantity">
 
@@ -827,18 +727,14 @@ Mascotas
 
         </div>
 
-
         <button
             class="cart-btn"
             onclick="agregarCarrito('Aromax Aroma Lavanda 1800cc',1550,23)"
         >
-
             Agregar al carrito
-
         </button>
 
     </div>
-
 
 
     <!-- ================= PARMA SPAGHETTI ================= -->
@@ -849,7 +745,10 @@ Mascotas
             Disponible
         </span>
 
-        <img src="imagenesabarrote/parmaspaghetti.jpeg" alt="Parma Spaghetti 5 400g">
+        <img
+            src="imagenesabarrote/parmaspaghetti.jpeg"
+            alt="Parma Spaghetti 5 400g"
+        >
 
         <h3>
             Parma
@@ -862,7 +761,6 @@ Mascotas
         <h4>
             $750
         </h4>
-
 
         <div class="quantity">
 
@@ -883,14 +781,11 @@ Mascotas
 
         </div>
 
-
         <button
             class="cart-btn"
             onclick="agregarCarrito('Parma Spaghetti 5 400g',750,46)"
         >
-
             Agregar al carrito
-
         </button>
 
     </div>
@@ -900,6 +795,7 @@ Mascotas
 ```
 
 </section>
+
 
 <!-- ================= MARCAS ================= -->
 
@@ -1188,7 +1084,7 @@ Envíos
 
 
 <li>
-Devoluciones
+ Formas de pago
 </li>
 
 
@@ -1218,17 +1114,17 @@ Contáctanos
 
 
 <p>
-📞 +56 9 1234 5678
+📞 +56 9 8499 6669
 </p>
 
 
 <p>
-✉ ventas@mjbspa.cl
+✉ mjbcomercializadora@gmail.com
 </p>
 
 
 <p>
-📍 Santiago, Chile
+📍 Chillán/Ñuble
 </p>
 
 
@@ -1265,7 +1161,7 @@ Contáctanos
 
 
 <a 
-href="https://wa.me/56964240040"
+href="https://wa.me/56984996669"
 class="whatsapp-float"
 target="_blank"
 >

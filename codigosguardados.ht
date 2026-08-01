@@ -1,0 +1,22 @@
+<!-- BUSCADOR -->
+
+<div class="search">
+
+<input 
+type="text"
+id="buscar"
+placeholder="Buscar productos..."
+>
+
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+
+</div>
+
+
+codigo de buscador

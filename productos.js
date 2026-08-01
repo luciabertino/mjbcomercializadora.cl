@@ -392,7 +392,7 @@ const productos = [
        ===================================================== */ 
 
 
-       
+
 
     {
         nombre: "familand shampoo jalea real Nutritivo 750ml",
@@ -514,12 +514,57 @@ const productos = [
         imagen: "imageneshigiene/romokytoallitashum.jpeg"
     },
 
+/* =====================================================
+   🐶 MASCOTAS
+   ===================================================== */
 
-    /* =====================================================
-       🐶 MASCOTAS
-       ===================================================== */
+{
+    nombre: "Master Dog Cachorro 18kg",
+    categoria: "Mascotas",
+    precio: 29990,
+    pagina: "mascotas.html",
+    imagen: ""
+},
 
-    // Los productos de Mascotas se agregarán aquí.
+{
+    nombre: "Master Dog Adulto Carne 18kg",
+    categoria: "Mascotas",
+    precio: 29990,
+    pagina: "mascotas.html",
+    imagen: ""
+},
+
+{
+    nombre: "Master Dog Adulto Raza Pequeña 18kg",
+    categoria: "Mascotas",
+    precio: 29990,
+    pagina: "mascotas.html",
+    imagen: ""
+},
+
+{
+    nombre: "Master Dog Senior 18kg",
+    categoria: "Mascotas",
+    precio: 29990,
+    pagina: "mascotas.html",
+    imagen: ""
+},
+
+{
+    nombre: "Master Cat Carne 20kg",
+    categoria: "Mascotas",
+    precio: 45900,
+    pagina: "mascotas.html",
+    imagen: ""
+},
+
+{
+    nombre: "Master Cat Salmón 20kg",
+    categoria: "Mascotas",
+    precio: 45900,
+    pagina: "mascotas.html",
+    imagen: ""
+},
 
 
     /* =====================================================

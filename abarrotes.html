@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>MJB | Abarrotes</title>
+
+
+<!-- FUENTE -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="style.css">
+
+
+<!-- ICONOS -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- ================= BARRA SUPERIOR ================= -->
+
+
+<div class="business-bar">
+
+🚚 Distribuidora MJB | Limpieza, hogar y consumo
+
+</div>
+
+
+
+
+
+
+<!-- ================= HEADER ================= -->
+
+
+<header>
+
+
+<div class="top-header">
+
+
+
+<!-- LOGO -->
+
+
+<div class="logo">
+
+
+<img src="imagenes/mjb.png" alt="Logo MJB">
+
+
+</div>
+
+
+
+
+
+
+<!-- BUSCADOR -->
+
+
+<div class="search">
+
+
+<input 
+type="text"
+id="buscar"
+placeholder="Buscar productos..."
+>
+
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ICONOS -->
+
+
+<div class="icons">
+
+
+<a href="mailto:ventas@mjbspa.cl">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+
+
+<a href="https://instagram.com/mjbspa" target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+
+
+
+<div class="cart" id="abrirCarrito">
+
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+
+<span>
+Carrito
+</span>
+
+
+<div class="count" id="cart-count">
+
+0
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- MENU -->
+
+
+<nav>
+
+
+<ul>
+
+
+<li>
+<a href="index.html">
+Inicio
+</a>
+</li>
+
+
+<li>
+<a href="limpieza.html">
+Limpieza
+</a>
+</li>
+
+
+<li>
+<a href="abarrotes.html">
+Abarrotes
+</a>
+</li>
+
+
+<li>
+<a href="higiene.html">
+Higiene
+</a>
+</li>
+
+
+<li>
+<a href="mascotas.html">
+Mascotas
+</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+</header>
+
+
+<!-- ================= CARRITO LATERAL ================= -->
+
+
+<div class="carrito-panel" id="carritoPanel">
+
+
+<div class="carrito-header">
+
+
+<h2>
+Mi carrito
+</h2>
+
+
+<button id="cerrarCarrito">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div id="listaCarrito">
+
+
+<p>
+Tu carrito está vacío
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="carrito-total">
+
+
+Total:
+
+<strong id="total">
+
+$0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="datos-cliente">
+
+
+<h3>
+Datos del pedido
+</h3>
+
+
+
+<input 
+type="text"
+id="nombreCliente"
+placeholder="Nombre completo"
+>
+
+
+
+<input 
+type="tel"
+id="telefonoCliente"
+placeholder="Teléfono"
+>
+
+
+
+<input 
+type="text"
+id="direccionCliente"
+placeholder="Dirección"
+>
+
+
+
+
+<select id="pagoCliente">
+
+
+<option>
+Forma de pago
+</option>
+
+
+<option>
+Efectivo
+</option>
+
+
+<option>
+Transferencia
+</option>
+
+
+<option>
+Tarjeta
+</option>
+
+
+</select>
+
+
+
+
+
+
+<button class="whatsapp-btn" id="whatsappBtn">
+
+Enviar pedido por WhatsApp
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTOS ABARROTES ================= -->
+
+
+<section class="products" id="productos">
+
+
+
+
+
+<div class="section-title">
+
+
+<h2>
+
+Productos de Abarrotes
+
+</h2>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="product-grid">
+
+
+<!-- ================= PRODUCTO 43 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesabarrote/lucchetisals.jpeg" alt="Lucchetti salsa de tomate 200g">
+
+
+<h3>
+Lucchetti
+</h3>
+
+
+<p>
+Salsa de tomate 200g
+</p>
+
+
+<h4>
+$600
+</h4>
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(43)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad43"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(43)">
++
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Lucchetti salsa de tomate 200g',600,43)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 44 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesabarrote/sanremosalsa.jpeg" alt="San Remo salsa de tomate 200g">
+
+
+<h3>
+San Remo
+</h3>
+
+
+<p>
+Salsa de tomate 200g
+</p>
+
+
+<h4>
+$450
+</h4>
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(44)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad44"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(44)">
++
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('San Remo salsa de tomate 200g',450,44)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+<!-- ================= PRODUCTO 45 ================= -->
+
+<div class="product">
+
+    <span class="stock">
+    Disponible
+    </span>
+
+    <img src="imagenesabarrote/arubaarroz.jpeg" alt="Aruba Arroz 900g">
+
+    <h3>
+    Aruba
+    </h3>
+
+    <p>
+    Arroz de familia 900g
+    </p>
+
+    <h4>
+    $1.400
+    </h4>
+
+    <div class="quantity">
+
+        <button onclick="restarCantidad(45)">
+        -
+        </button>
+
+        <input
+        type="number"
+        id="cantidad45"
+        value="1"
+        min="1"
+        >
+
+        <button onclick="sumarCantidad(45)">
+        +
+        </button>
+
+    </div>
+
+    <button
+    class="cart-btn"
+    onclick="agregarCarrito('Aruba Arroz 900g',1400,45)"
+    >
+
+    Agregar al carrito
+
+    </button>
+
+</div>
+
+
+
+<!-- ================= PRODUCTO 46 ================= -->
+
+<div class="product">
+
+    <span class="stock">
+    Disponible
+    </span>
+
+    <img src="imagenesabarrote/parmaspaghetti.jpeg" alt="Parma Spaghetti 5 400g">
+
+    <h3>
+    Parma 
+    </h3>
+
+    <p>
+    Spaghetti 5 400g
+    </p>
+
+    <h4>
+    $750
+    </h4>
+
+    <div class="quantity">
+
+        <button onclick="restarCantidad(46)">
+        -
+        </button>
+
+        <input
+        type="number"
+        id="cantidad46"
+        value="1"
+        min="1"
+        >
+
+        <button onclick="sumarCantidad(46)">
+        +
+        </button>
+
+    </div>
+
+    <button
+    class="cart-btn"
+    onclick="agregarCarrito('Parma Spaghetti 5 400g',750,46)"
+    >
+
+    Agregar al carrito
+
+    </button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contacto">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+
+            <img src="imagenes/logopng.png" alt="Logo MJB">
+
+            <p>
+                Importamos y distribuimos productos de limpieza, hogar, higiene,
+                mascotas y abarrotes con la mejor calidad y precios competitivos.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Enlaces</h3>
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="limpieza.html">Limpieza</a></li>
+                <li><a href="abarrotes.html">Abarrotes</a></li>
+                <li><a href="higiene.html">Higiene</a></li>
+                <li><a href="mascotas.html">Mascotas</a></li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Ayuda</h3>
+
+            <ul>
+                <li>Preguntas frecuentes</li>
+                <li>Envíos</li>
+                <li>Formas de pago</li>
+                <li>Términos y condiciones</li>
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Contáctanos</h3>
+
+            <p>📞 +56 9 6424 0040</p>
+            <p>✉ ventas@mjbspa.cl</p>
+            <p>📍 Chile</p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 MJB Distribuidora - Todos los derechos reservados.
+    </div>
+
+</footer>
+
+<!-- ================= WHATSAPP ================= -->
+
+<a href="https://wa.me/56964240040"
+class="whatsapp-float"
+target="_blank">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+<script src="productos.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

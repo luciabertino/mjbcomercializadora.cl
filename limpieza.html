@@ -1,0 +1,3790 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MJB | Limpieza</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<div class="business-bar">
+
+🚚 Distribuidora MJB | Limpieza, hogar y consumo
+
+</div>
+
+
+
+
+
+<header>
+
+
+<div class="top-header">
+
+
+
+<div class="logo">
+
+
+<a href="index.html">
+
+<img src="imagenes/mjb.png" alt="Logo MJB">
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="search">
+
+
+<input 
+type="text"
+id="buscar"
+placeholder="Buscar productos..."
+>
+
+
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="icons">
+
+
+<a href="mailto:ventas@mjbspa.cl">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+
+
+<a href="https://instagram.com/mjbspa" target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+
+
+
+<div class="cart" id="abrirCarrito">
+
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+
+<span>
+Carrito
+</span>
+
+
+<div class="count" id="cart-count">
+
+0
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<nav>
+
+
+<ul>
+
+
+<li>
+<a href="index.html">
+Inicio
+</a>
+</li>
+
+
+<li>
+<a href="limpieza.html">
+Limpieza
+</a>
+</li>
+
+
+<li>
+<a href="abarrotes.html">
+Abarrotes
+</a>
+</li>
+
+
+<li>
+<a href="higiene.html">
+Higiene
+</a>
+</li>
+
+
+<li>
+<a href="mascotas.html">
+Mascotas
+</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+</header>
+
+
+<!-- ================= CARRITO LATERAL ================= -->
+
+
+<div class="carrito-panel" id="carritoPanel">
+
+
+<div class="carrito-header">
+
+
+<h2>
+Mi carrito
+</h2>
+
+
+<button id="cerrarCarrito">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div id="listaCarrito">
+
+
+<p>
+Tu carrito está vacío
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="carrito-total">
+
+
+Total:
+
+<strong id="total">
+
+$0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="datos-cliente">
+
+
+<h3>
+Datos del pedido
+</h3>
+
+
+
+<input 
+type="text"
+id="nombreCliente"
+placeholder="Nombre completo"
+>
+
+
+
+<input 
+type="tel"
+id="telefonoCliente"
+placeholder="Teléfono"
+>
+
+
+
+
+<input 
+type="text"
+id="direccionCliente"
+placeholder="Dirección"
+>
+
+
+
+
+<select id="pagoCliente">
+
+
+<option>
+Forma de pago
+</option>
+
+
+<option>
+Efectivo
+</option>
+
+
+<option>
+Transferencia
+</option>
+
+
+<option>
+Tarjeta
+</option>
+
+
+</select>
+
+
+
+
+<button class="whatsapp-btn" id="whatsappBtn">
+
+Enviar pedido por WhatsApp
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTOS LIMPIEZA ================= -->
+
+
+<section class="products" id="productos">
+
+
+
+
+
+<div class="section-title">
+
+
+<h2>
+
+Productos de Limpieza
+
+</h2>
+
+
+</div>
+
+
+
+
+
+
+<div class="product-grid">
+
+
+
+
+<!-- ================= PRODUCTO 1 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imageneslimpieza/omoultraconctrazulparaprep.jpeg" alt="Omo Ultra Concentrado">
+
+
+
+<h3>
+OMO UltraConcentrado
+</h3>
+
+
+
+<p>
+Para preparar 500ml(rinde 3L)
+</p>
+
+
+
+<h4>
+$4.800
+</h4>
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(0)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad0"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(0)">
++
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Omo Ultra Concentrado',4800,0)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 2 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imageneslimpieza/omorosaparaprer.jpeg" alt="Omo Piel Sensible">
+
+
+
+<h3>
+OMO Piel Sensible 
+</h3>
+
+
+
+<p>
+Para preparar 500ml(rinde 3L)
+</p>
+
+
+
+<h4>
+$4.800
+</h4>
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(1)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad1"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(1)">
++
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Omo Piel Sensible',4800,1)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 3 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imageneslimpieza/omo400mlultrapower.jpeg" alt="Omo ultrapower 400ml">
+
+
+
+<h3>
+OMO UltraPower Concentrado
+</h3>
+
+
+
+<p>
+Quita manchas 400ml
+</p>
+
+
+
+<h4>
+$1.100
+</h4>
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(2)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad2"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(2)">
++
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Omo ultrapower 400ml',1100,2)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 4 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imageneslimpieza/activeplusamarcremalimpiador..jpeg" alt="Active Plus Crema Limpiadora LIMON">
+
+
+
+<h3>
+Active Plus Crema Limpiadora
+</h3>
+
+
+
+<p>
+750grs Fragancia Limon
+</p>
+
+
+
+<h4>
+$1.650
+</h4>
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(3)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad3"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(3)">
++
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Active Plus Crema Limpiadora LIMON',1650,3)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 5 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imageneslimpieza/activepluscremalimpiadora.jpeg" alt="Detergente ropa">
+
+
+
+<h3>
+Active Plus Crema Limpiadora 
+</h3>
+
+
+
+<p>
+ 750grs Fragancia Natural
+</p>
+
+
+
+<h4>
+$1.600
+</h4>
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(4)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad4"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(4)">
++
+</button>
+
+
+</div>
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Active Plus Crema Limpiadora Natural',1600,4)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 6 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/activeplusclorogellavand.jpeg" alt="Active Plus Clorogel lavanda">
+
+
+<h3>
+Active Plus Cloro gel
+</h3>
+
+
+<p>
+Aroma Lavanda 900ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(5)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad5"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(5)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Active Plus Clorogel lavanda',1400,5)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 7 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/activeplusperfumadorrojo.jpeg" alt="Active Plus Perfumador">
+
+
+<h3>
+Active Plus Perfumador
+</h3>
+
+
+<p>
+Aroma Berries 500cc
+</p>
+
+
+<h4>
+$1.450
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(6)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad6"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(6)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Active Plus Perfumador',1450,6)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 8 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/activeplusverde.jpeg" alt="Active Plus Desinfectante">
+
+
+<h3>
+Active Plus Desinfectante 
+</h3>
+
+
+<p>
+Limpiador Multiuso 500cc
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(7)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad7"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(7)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Active Plus Desinfectante',1400,7)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 9 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/activeplussacasarro.jpeg" alt="Active Plus Saca sarro">
+
+
+<h3>
+Active Plus Saca Sarro
+</h3>
+
+
+<p>
+Accion Rapida 500cc
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(8)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad8"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(8)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Active Plus Saca sarro',1400,8)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 10 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excellclorogelamarill.jpeg" alt="Excell Clorogel Limon">
+
+
+<h3>
+Excell Cloro Gel 
+</h3>
+
+
+<p>
+Antisarro 900ml Aroma Limon
+</p>
+
+
+<h4>
+$1.500
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(9)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad9"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(9)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell Clorogel Limon',1500,9)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 11 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excellclorogelazul.jpeg" alt="Excell Clorogel Floral">
+
+
+<h3>
+Excell Cloro Gel
+</h3>
+
+
+<p>
+Antisarro 900ml Aroma Floral
+</p>
+
+
+<h4>
+$1.500
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(10)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad10"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(10)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell Clorogel Floral',1500,10)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 12 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excellclorogelverde.jpeg" alt="Excell clorogel Menta">
+
+
+<h3>
+Excell Cloro Gel 
+</h3>
+
+
+<p>
+Antisarro 900ml Aroma Menta
+</p>
+
+
+<h4>
+$1.500
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(11)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad11"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(11)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell clorogel Menta',1500,11)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 13 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excellclorogelviolt.jpeg" alt="Excell Clorogel Lavanda">
+
+
+<h3>
+Excell Cloro Gel 
+</h3>
+
+
+<p>
+Antisarro 900ml Aroma Lavanda
+</p>
+
+
+<h4>
+$1.500
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(12)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad12"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(12)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell clorogel Lavanda',1500,12)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 14 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excelllimpiadorcremalimon.jpeg" alt="Excell Limpiador Crema Limon">
+
+
+<h3>
+Excell Limpiador Crema
+</h3>
+
+
+<p>
+    Aroma Limon 750g
+</p>
+
+
+<h4>
+$2.100
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(13)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad13"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(13)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell Limpiador Crema Limon',2100,13)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 15 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excellquitagrasanaranja.jpeg" alt="Excell Quita Grasa">
+
+
+<h3>
+Excell Quita Grasa
+</h3>
+
+
+<p>
+500ml
+</p>
+
+
+<h4>
+$2.750
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(14)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad14"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(14)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell Quita Grasa',2750,14)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 16 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excelllimpiapisoamor.jpeg" alt="Excell limpiapisos Amor">
+
+
+<h3>
+Excell Limpiapisos
+</h3>
+
+
+<p>
+Aroma Amor 900ml
+</p>
+
+
+<h4>
+$1.300
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(15)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad15"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(15)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell limpiapisos Amor',1300,15)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 17 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excelllimpiapisoceleste.jpeg" alt="Excell Limpiapisos Citrico Frutal">
+
+
+<h3>
+Excell Limpiapisos
+</h3>
+
+
+<p>
+Aroma Citrico Frutal 900ml
+</p>
+
+
+<h4>
+$1.300
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(16)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad16"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(16)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell Limpiapisos Citrico Frutal',1300,16)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 18 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excelllimpiapisorosa.jpeg" alt="Excell Limpiapisos Primavera">
+
+
+<h3>
+Excell Limpiapisos
+</h3>
+
+
+<p>
+Aroma Primavera 900ml
+</p>
+
+
+<h4>
+$1.300
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(17)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad17"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(17)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell Limpiapisos Primavera',1300,17)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 19 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/excelllimpiapisoverde.jpeg" alt="Excell Limpiapisos Bergamota">
+
+
+<h3>
+Excell Limpiapisos
+</h3>
+
+
+<p>
+Aroma Bergamota 900ml
+</p>
+
+
+<h4>
+$1.300
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(18)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad18"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(18)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Excell Limpiapisos Bergamota',1300,18)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 20 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/bionaranj800g.jpeg" alt="Bio frescura 800g desierto florido">
+
+
+<h3>
+Bio Frescura 
+</h3>
+
+
+<p>
+Detergente en polvo aroma desierto florido 800g
+</p>
+
+
+<h4>
+$1.800
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(19)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad19"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(19)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Bio frescura 800g desierto florido',1800,19)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 21 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/bioverde800g.jpeg" alt="Bio frescura 800g Bosque Nativo">
+
+
+<h3>
+Bio Frescura
+</h3>
+
+
+<p>
+Detergente en polvo aroma Bosque Nativo 800g
+</p>
+
+
+<h4>
+$1.800
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(20)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad20"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(20)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Bio frescura 800g Bosque Nativo',1800,20)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 22 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/aromaxazl.jpeg" alt="Aromax Aroma surprise 1.800ml">
+
+
+<h3>
+Aromax
+</h3>
+
+
+<p>
+Limpiador multiuso aroma Surprise 1.800ml
+</p>
+
+
+<h4>
+$1.550
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(21)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad21"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(21)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Aromax Aroma Surprise 1.800ml',1550,21)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 23 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/aromaxberries.jpeg" alt="Aromax Aroma Beries 1800cc">
+
+
+<h3>
+Aromax
+</h3>
+
+
+<p>
+Limpiador multiuso Aroma Berries 1.800cc
+</p>
+
+
+<h4>
+$1.550
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(22)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad22"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(22)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Aromax Aroma Beries 1800cc',1550,22)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 24 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/aromaxlavanda.jpeg" alt="Aromax Aroma Lavanda 1800cc">
+
+
+<h3>
+Aromax
+</h3>
+
+
+<p>
+Limpiador multiuso Aroma Lavanda 1.800cc
+</p>
+
+
+<h4>
+$1.550
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(23)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad23"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(23)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Aromax Aroma Lavanda 1800cc',1550,23)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 25 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/virutexrosalimpia.jpeg" alt="Virutex Aroma Primavera 900ml">
+
+
+<h3>
+Virutex
+</h3>
+
+
+<p>
+Limpiador multisuperficies Aroma Primavera 900ml
+</p>
+
+
+<h4>
+$1.500
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(24)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad24"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(24)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Virutex Aroma Primavera 900ml',1500,24)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 26 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/cifcrema250ml.jpeg" alt="CIF crema multiuso 250ml">
+
+
+<h3>
+CIF Bioactive
+</h3>
+
+
+<p>
+Crema Multiuso 250ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(25)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad25"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(25)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('CIF crema multiuso 250ml',1400,25)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 27 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/lysoform207g.jpeg" alt="Lysoform Desinfectante 207g">
+
+
+<h3>
+Lysoform
+</h3>
+
+
+<p>
+Desinfectante de ambientes y superficies 207g
+</p>
+
+
+<h4>
+$3.270
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(26)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad26"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(26)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Lysoform Desinfectante 207g',3270,26)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 28 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/impekeclorogelnaranja.jpeg" alt="Impeke cloro gel 900ml citrus tropical">
+
+
+<h3>
+Impeke Cloro Gel
+</h3>
+
+
+<p>
+Limpiador desinfectante Aroma Citrus Tropical 900ml
+</p>
+
+
+<h4>
+$1.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(27)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad27"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(27)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Impeke cloro gel 900ml citrus tropical',1900,27)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 29 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/impekeclorogelrojo.jpeg" alt="Impeke cloro gel 900ml tradicional">
+
+
+<h3>
+Impeke Cloro Gel
+</h3>
+
+
+<p>
+Limpiador desinfectante tradicional 900ml
+</p>
+
+
+<h4>
+$1.750
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(28)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad28"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(28)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Impeke cloro gel 900ml tradicional',1750,28)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 30 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/igenixclorogel.jpeg" alt="Igenix Cloro gel 900ml eucaliptus">
+
+
+<h3>
+Igenix Cloro Gel
+</h3>
+
+
+<p>
+Lavandina en gel Aroma Eucaliptus 900ml 
+</p>
+
+
+<h4>
+$1.850
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(29)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad29"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(29)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Igenix Cloro gel 900ml eucaliptus',1850,29)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 31 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/quixultraazul.jpeg" alt="Quix UltraConcentrado 200ml">
+
+
+<h3>
+Quix UltraConcentrado
+</h3>
+
+
+<p>
+Lavalozas 200ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(30)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad30"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(30)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Quix UltraConcentrado 200ml',1400,30)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 32 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/wynlavalozas.jpeg" alt="Wyn lavalozas 750ml">
+
+
+<h3>
+Wyn
+</h3>
+
+
+<p>
+Lavalozas 750ml
+</p>
+
+
+<h4>
+$1.700
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(31)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad31"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(31)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Wyn lavalozas 750ml',1700,31)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 33 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/esponjalisa.jpeg" alt="Esponja lisas pack 5">
+
+
+<h3>
+Esponjas Lisas
+</h3>
+
+
+<p>
+    Pack-5
+</p>
+
+
+<h4>
+$1.100
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(32)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad32"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(32)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Esponja lisas pack 5',1100,32)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 34 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/esponjaacanalada.jpeg" alt="Esponjas Acanalada pack 4">
+
+
+<h3>
+Esponjas Acanalada
+</h3>
+
+
+<p>
+Pack-4
+</p>
+
+
+<h4>
+$1150
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(33)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad33"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(33)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Esponjas Acanalada pack 4',1150,33)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 35 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/ovellaxl.jpeg" alt="Ovella xl toalla de papel">
+
+
+<h3>
+Ovella XL
+</h3>
+
+
+<p>
+Toalla de papel doble hoja 80 metros
+</p>
+
+
+<h4>
+$1950
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(34)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad34"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(34)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Ovella xl toalla de papel',1950,34)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+<!-- ================= PRODUCTO 36 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/propaperxl.jpeg" alt="ProPaper XL Toalla de papel">
+
+
+<h3>
+ProPaper XL
+</h3>
+
+
+<p>
+Toalla de papel 275 hojas dobles y firmes
+</p>
+
+
+<h4>
+$2.000
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(35)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad35"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(35)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('ProPaper XL Toalla de papel',2000,35)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 37 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/bolsadebasura70x90.jpeg" alt="DOM Bolsa de basura 70x90">
+
+
+<h3>
+DOM
+</h3>
+
+
+<p>
+Bolsa de basura 70x90
+</p>
+
+
+<h4>
+$890
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(36)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad36"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(36)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('DOM Bolsa de basura 70x90',890,36)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 38 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/cloro.jpeg" alt="Cloro 5lt">
+
+
+<h3>
+Cloro 5LT
+</h3>
+
+
+<p>
+Maxima Limpieza 
+</p>
+
+
+<h4>
+$2.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(37)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad37"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(37)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Cloro 5lt',2400,37)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 39 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/gomugomu.jpeg" alt="GomuGomu 5lt">
+
+
+<h3>
+GomuGomu
+</h3>
+
+
+<p>
+detergente liquido + suavizante 5lt
+</p>
+
+
+<h4>
+$2.200
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(38)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad38"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(38)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('GomuGomu 5lt',2200,38)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 40 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/shopnowaromatizanteazul.jpeg" alt="ShopNow Aromatizante aroma oceano 400ml">
+
+
+<h3>
+ShopNow Aromatizante Ambiental
+</h3>
+
+
+<p>
+Aroma Oceano 400ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(39)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad39"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(39)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('ShopNow Aromatizante aroma oceano 400ml',1400,39)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+<!-- ================= PRODUCTO 41 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/shopnowaromatizantelimon.jpeg" alt="ShopNow Aromatizante aroma Limon 400ml">
+
+<h3>
+ShopNow Aromatizante Ambiental
+</h3>
+
+
+<p>
+Aroma Limon 400ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(40)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad40"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(40)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('ShopNow Aromatizante aroma Limon 400ml',1400,40)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 42 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/shopnowaromatizantenaranja.jpeg" alt="ShopNow Aromatizante aroma Damasco 400ml">
+
+
+<h3>
+ShopNow Aromatizante Ambiental
+</h3>
+
+
+<p>
+Aroma Damasco 400ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(41)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad41"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(41)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('ShopNow Aromatizante aroma Damasco 400ml',1400,41)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 43 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneslimpieza/shopnowaromatizanteviolet+.jpeg" alt="ShopNow Aromatizante aroma Lavanda 400ml">
+
+
+<h3>
+ShopNow Aromatizante Ambiental
+</h3>
+
+
+<p>
+Aroma Lavanda 400ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(42)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad42"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(42)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('ShopNow Aromatizante aroma Lavanda 400ml',1400,42)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+<!-- CIERRE PRODUCTOS -->
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer id="contacto">
+
+
+
+<div class="footer-container">
+
+
+
+
+
+<div class="footer-logo">
+
+
+<img src="imagenes/mjb.png" alt="Logo MJB">
+
+
+<p>
+
+Importamos y distribuimos productos de limpieza, hogar y consumo.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+
+<h3>
+Enlaces
+</h3>
+
+
+<ul>
+
+<li>
+Inicio
+</li>
+
+
+<li>
+Productos
+</li>
+
+
+<li>
+Categorías
+</li>
+
+
+<li>
+Contacto
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+
+<h3>
+Ayuda
+</h3>
+
+
+<ul>
+
+
+<li>
+Preguntas frecuentes
+</li>
+
+
+<li>
+Envíos
+</li>
+
+
+<li>
+Devoluciones
+</li>
+
+
+<li>
+Términos y condiciones
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+
+<h3>
+Contáctanos
+</h3>
+
+
+
+<p>
+📞 +56 9 6424 0040
+</p>
+
+
+<p>
+✉ ventas@mjbspa.cl
+</p>
+
+
+<p>
+📍 Chile
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="copyright">
+
+
+© 2026 MJB - Todos los derechos reservados
+
+
+</div>
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- ================= WHATSAPP FLOTANTE ================= -->
+
+
+<a 
+href="https://wa.me/56964240040"
+class="whatsapp-float"
+target="_blank"
+>
+
+
+<i class="fa-brands fa-whatsapp"></i>
+
+
+</a>
+
+
+
+
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+
+<script src="productos.js"></script>
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>

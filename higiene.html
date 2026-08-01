@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>MJB | Higiene</title>
+
+
+<!-- FUENTE -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="style.css">
+
+
+<!-- ICONOS -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- ================= BARRA SUPERIOR ================= -->
+
+
+<div class="business-bar">
+
+🚚 Distribuidora MJB | Limpieza, hogar y consumo
+
+</div>
+
+
+
+
+
+<!-- ================= HEADER ================= -->
+
+
+<header>
+
+
+
+<div class="top-header">
+
+
+
+
+
+<!-- LOGO -->
+
+
+<div class="logo">
+
+
+<img src="imagenes/mjb.png" alt="Logo MJB">
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BUSCADOR -->
+
+
+<div class="search">
+
+
+<input 
+type="text"
+id="buscar"
+placeholder="Buscar productos..."
+>
+
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ICONOS -->
+
+
+<div class="icons">
+
+
+<a href="mailto:ventas@mjbspa.cl">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+
+
+
+
+<a href="https://instagram.com/mjbspa" target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+
+
+
+
+
+<div class="cart" id="abrirCarrito">
+
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+
+
+<span>
+
+Carrito
+
+</span>
+
+
+
+
+
+<div class="count" id="cart-count">
+
+0
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= MENU ================= -->
+
+
+<nav>
+
+
+<ul>
+
+
+<li>
+
+<a href="index.html">
+
+Inicio
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="limpieza.html">
+
+Limpieza
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="abarrotes.html">
+
+Abarrotes
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="higiene.html">
+
+Higiene
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="mascotas.html">
+
+Mascotas
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- ================= CARRITO LATERAL ================= -->
+
+
+<div class="carrito-panel" id="carritoPanel">
+
+
+
+<div class="carrito-header">
+
+
+<h2>
+
+Mi carrito
+
+</h2>
+
+
+
+<button id="cerrarCarrito">
+
+
+<i class="fa-solid fa-xmark"></i>
+
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div id="listaCarrito">
+
+
+<p>
+
+Tu carrito está vacío
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="carrito-total">
+
+
+Total:
+
+<strong id="total">
+
+$0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div class="datos-cliente">
+
+
+<h3>
+
+Datos del pedido
+
+</h3>
+
+
+
+
+<input 
+type="text"
+id="nombreCliente"
+placeholder="Nombre completo"
+>
+
+
+
+
+
+<input 
+type="tel"
+id="telefonoCliente"
+placeholder="Teléfono"
+>
+
+
+
+
+
+<input 
+type="text"
+id="direccionCliente"
+placeholder="Dirección"
+>
+
+
+
+
+
+<select id="pagoCliente">
+
+
+<option>
+
+Forma de pago
+
+</option>
+
+
+<option>
+
+Efectivo
+
+</option>
+
+
+<option>
+
+Transferencia
+
+</option>
+
+
+<option>
+
+Tarjeta
+
+</option>
+
+
+</select>
+
+
+
+
+<button class="whatsapp-btn" id="whatsappBtn">
+
+Enviar pedido por WhatsApp
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+<!-- ================= PRODUCTOS HIGIENE ================= -->
+
+
+<section class="products" id="productos">
+
+
+<div class="section-title">
+
+
+<h2>
+
+Productos de Higiene
+
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="product-grid">
+
+
+
+
+
+<!-- ================= PRODUCTO 47 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/familandsampjalea.jpeg" alt="familand shampoo jalea real Nutritivo 750ml">
+
+
+<h3>
+Familand
+</h3>
+
+
+<p>
+Shampoo Jalea Real Nutritivo 750ml
+</p>
+
+
+<h4>
+$1.950
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(47)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad47"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(47)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('familand shampoo jalea real Nutritivo 750ml',1950,47)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 48 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/familandsampvioletcentaure.jpeg" alt="familand shampoo ceantuarea cyanus 750ml">
+
+
+<h3>
+Familand
+</h3>
+
+
+<p>
+Shampoo Centaurea Cyanus Canoso 750ml
+</p>
+
+
+<h4>
+$1.950
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(48)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad48"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(48)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('familand shampoo ceantuarea cyanus 750ml',1950,48)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 49 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/familandsmapamarillmanzanilla.jpeg" alt="familand shampoo Manzanilla 750ml">
+
+
+<h3>
+Familand
+</h3>
+
+
+<p>
+Shampoo Manzanilla Reflejos Luminosos 750ml
+</p>
+
+
+<h4>
+$1.950
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(49)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad49"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(49)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('familand shampoo Manzanilla 750ml',1950,49)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 50 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/familandverdeshampmanz.jpeg" alt="familand shampoo Manzana-papaya 750ml">
+
+
+<h3>
+Familand
+</h3>
+
+
+<p>
+Shampoo Manzana-Papaya Detox Brillo 750ml
+</p>
+
+
+<h4>
+$1.950
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(50)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad50"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(50)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('familand shampoo Manzana-papaya 750ml',1950,50)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 51 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/familandacondblancojalea.jpeg" alt="Familand Acondicionador Jalea Real 750ml">
+
+
+<h3>
+Familand
+</h3>
+
+
+<p>
+Acondicionador Jalea Real Nutritivo 750ml
+</p>
+
+
+<h4>
+$1.950
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(51)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad51"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(51)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Familand Acondicionador Jalea Real 750ml',1950,51)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 52 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/tionachoanticanasahmp.jpeg" alt="Tio Nacho shampoo Anti-Canas 415ml">
+
+
+<h3>
+Tio Nacho
+</h3>
+
+
+<p>
+Shampoo Anti-Canas Jalea Real 415ml
+</p>
+
+
+<h4>
+$6.200
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(52)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad52"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(52)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Tio Nacho shampoo Anti-Canas 415ml',6200,52)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 53 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/tionachoshampacndultrah.jpeg" alt="Tio Nacho Shamp+acond Anti-Caida ultra hidratante">
+
+
+<h3>
+Tio Nacho
+</h3>
+
+
+<p>
+Shampoo+Acondicionador Anti-Caida Ultra Hidratante 415ml
+</p>
+
+
+<h4>
+$12.000
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(53)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad53"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(53)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Tio Nacho Shamp+acond Anti-Caida ultra hidratante',12000,53)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 54 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/kadusshamporosa.jpeg" alt="Kadus Shampoo Rosado 900ml">
+
+
+<h3>
+Kadus
+</h3>
+
+
+<p>
+Shampoo Rosado 900ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(54)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad54"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(54)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Kadus Shampoo Rosado 900ml',1400,54)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 55 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/kagusbalsamorosa.jpeg" alt="Kadus Balsamo Rosado 900ml">
+
+
+<h3>
+Kadus 
+</h3>
+
+
+<p>
+Bálsamo Rosado 900ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(55)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad55"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(55)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Kadus Balsamo Rosado 900ml',1400,55)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 56 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/kadusshampoverde.jpeg" alt="Kadus shampoo finas hierbas 900ml">
+
+
+<h3>
+Kadus
+</h3>
+
+
+<p>
+Shampoo finas hierbas 900ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(56)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad56"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(56)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Kadus shampoo finas hierbas 900ml',1400,56)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 57 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/kadusacondcocovainillacoco.jpeg" alt="kadus acondicionador vainilla coco 900ml">
+
+
+<h3>
+Kadus
+</h3>
+
+
+<p>
+Acondicionador Vainilla coco 900ml
+</p>
+
+
+<h4>
+$1.400
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(57)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad57"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(57)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('kadus acondicionador vainilla coco 900ml',1400,57)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 58 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/activeplusjabliqarand.jpeg" alt="Active Plus jabón líquido arandanos 1lt">
+
+
+<h3>
+Active Plus jabón líquido
+</h3>
+
+
+<p>
+Crema de arándanos 1LT
+</p>
+
+
+<h4>
+$1.350
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(58)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad58"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(58)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Active Plus jabón líquido arandanos 1lt',1350,58)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 59 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/activeplusjabliqdermosoft.jpeg" alt="Active Plus jabón líquido dermosoft 1lt">
+
+
+<h3>
+Active Plus jabón líquido
+</h3>
+
+
+<p>Crema Dermo soft 1lt
+</p>
+
+
+<h4>
+$1.350
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(59)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad59"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(59)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Active Plus jabón líquido dermosoft 1lt',1350,59)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 60 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/activeplusjabliqrosa.jpeg" alt="Active Plus jabón líquido Cremahidratante 1lt">
+
+
+<h3>
+Active Plus jabón líquido
+</h3>
+
+
+<p>
+Crema Hidratante 1LT
+</p>
+
+
+<h4>
+$1.350
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(60)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad60"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(60)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Active Plus jabón líquido Cremahidratante 1lt',1350,60)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 61 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imageneshigiene/romokytoallitashum.jpeg" alt="Romiky toallitas humedas 80pcs">
+
+
+<h3>
+Romiky 
+</h3>
+
+
+<p>
+Toallitas Humedas Agua Puro 80pcs
+</p>
+
+
+<h4>
+$1.250
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(61)">
+-
+</button>
+
+
+<input 
+type="number"
+id="cantidad61"
+value="1"
+min="1"
+>
+
+
+<button onclick="sumarCantidad(61)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Romiky toallitas humedas 80pcs',1250,61)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer id="contacto">
+
+
+<div class="footer-container">
+
+
+
+<div class="footer-logo">
+
+
+<img src="imagenes/logopng.png" alt="Logo MJB">
+
+
+
+<p>
+
+Importamos y distribuimos productos de limpieza, hogar, higiene,
+mascotas y abarrotes con la mejor calidad y precios competitivos.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div>
+
+
+<h3>
+Enlaces
+</h3>
+
+
+<ul>
+
+
+<li>
+<a href="index.html">
+Inicio
+</a>
+</li>
+
+
+<li>
+<a href="limpieza.html">
+Limpieza
+</a>
+</li>
+
+
+<li>
+<a href="abarrotes.html">
+Abarrotes
+</a>
+</li>
+
+
+<li>
+<a href="higiene.html">
+Higiene
+</a>
+</li>
+
+
+<li>
+<a href="mascotas.html">
+Mascotas
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+
+<h3>
+Ayuda
+</h3>
+
+
+<ul>
+
+
+<li>
+Preguntas frecuentes
+</li>
+
+
+<li>
+Envíos
+</li>
+
+
+<li>
+Formas de pago
+</li>
+
+
+<li>
+Términos y condiciones
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div>
+
+
+<h3>
+Contáctanos
+</h3>
+
+
+<p>
+📞 +56 9 6424 0040
+</p>
+
+
+<p>
+✉ ventas@mjbspa.cl
+</p>
+
+
+<p>
+📍 Chile
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="copyright">
+
+© 2026 MJB Distribuidora - Todos los derechos reservados.
+
+</div>
+
+
+
+</footer>
+
+
+
+
+
+
+
+
+<!-- ================= WHATSAPP ================= -->
+
+
+<a href="https://wa.me/56964240040"
+class="whatsapp-float"
+target="_blank">
+
+
+<i class="fa-brands fa-whatsapp"></i>
+
+
+</a>
+
+
+
+
+
+<script src="productos.js"></script>
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>

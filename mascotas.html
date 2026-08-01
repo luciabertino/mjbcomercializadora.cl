@@ -1,0 +1,5278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>MJB | Mascotas</title>
+
+
+<!-- FUENTE -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="style.css">
+
+
+<!-- ICONOS -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- ================= BARRA SUPERIOR ================= -->
+
+
+<div class="business-bar">
+
+🚚 Distribuidora MJB | Limpieza, hogar y consumo
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= HEADER ================= -->
+
+
+<header>
+
+
+<div class="top-header">
+
+
+
+<!-- LOGO -->
+
+
+<div class="logo">
+
+
+<img src="imagenes/mjb.png" alt="Logo MJB">
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BUSCADOR -->
+
+
+<div class="search">
+
+
+<input 
+type="text"
+id="buscar"
+placeholder="Buscar productos..."
+>
+
+
+<button>
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- ICONOS -->
+
+
+<div class="icons">
+
+
+<a href="mailto:ventas@mjbspa.cl">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+
+
+
+<a href="https://instagram.com/mjbspa" target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+
+
+
+
+
+<div class="cart" id="abrirCarrito">
+
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+
+<span>
+Carrito
+</span>
+
+
+<div class="count" id="cart-count">
+
+0
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- MENU -->
+
+
+<nav>
+
+
+<ul>
+
+
+<li>
+<a href="index.html">
+Inicio
+</a>
+</li>
+
+
+<li>
+<a href="limpieza.html">
+Limpieza
+</a>
+</li>
+
+
+<li>
+<a href="abarrotes.html">
+Abarrotes
+</a>
+</li>
+
+
+<li>
+<a href="higiene.html">
+Higiene
+</a>
+</li>
+
+
+<li>
+<a href="mascotas.html">
+Mascotas
+</a>
+</li>
+
+
+</ul>
+
+
+</nav>
+
+
+
+</header>
+
+<!-- ================= CARRITO LATERAL ================= -->
+
+
+<div class="carrito-panel" id="carritoPanel">
+
+
+
+<div class="carrito-header">
+
+
+<h2>
+Mi carrito
+</h2>
+
+
+
+<button id="cerrarCarrito">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="listaCarrito">
+
+
+<p>
+Tu carrito está vacío
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="carrito-total">
+
+
+Total:
+
+<strong id="total">
+
+$0
+
+</strong>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="datos-cliente">
+
+
+<h3>
+Datos del pedido
+</h3>
+
+
+
+
+
+<input 
+type="text"
+id="nombreCliente"
+placeholder="Nombre completo"
+>
+
+
+
+
+
+<input 
+type="tel"
+id="telefonoCliente"
+placeholder="Teléfono"
+>
+
+
+
+
+
+<input 
+type="text"
+id="direccionCliente"
+placeholder="Dirección"
+>
+
+
+
+
+
+
+
+<select id="pagoCliente">
+
+
+<option>
+Forma de pago
+</option>
+
+
+<option>
+Efectivo
+</option>
+
+
+<option>
+Transferencia
+</option>
+
+
+<option>
+Tarjeta
+</option>
+
+
+</select>
+
+
+
+
+
+
+
+
+<button class="whatsapp-btn" id="whatsappBtn">
+
+Enviar pedido por WhatsApp
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- ================= PRODUCTOS MASCOTAS ================= -->
+
+
+<section class="products" id="productos">
+
+
+
+<div class="section-title">
+
+
+<h2>
+
+Productos de Mascotas
+
+</h2>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="product-grid">
+
+
+
+
+
+
+<!-- ================= PRODUCTO 62 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/masterdogcachorro18kg.jpeg" alt="Master Dog cachorro 18kg">
+
+
+
+<h3>
+Master Dog
+</h3>
+
+
+
+<p>
+Alimento perro cachorro 18kg
+</p>
+
+
+
+<h4>
+$29.990
+</h4>
+
+
+
+
+
+
+<div class="quantity">
+
+
+
+<button onclick="restarCantidad(62)">
+-
+</button>
+
+
+
+
+
+<input 
+type="number"
+id="cantidad62"
+value="1"
+min="1"
+>
+
+
+
+
+
+<button onclick="sumarCantidad(62)">
++
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Master Dog cachorro 18kg',29990,62)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+<!-- ================= PRODUCTO 63 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/masterdogadultocarne18kg.jpeg" alt="Master Dog adulto carne 18kg">
+
+
+
+<h3>
+Master Dog
+</h3>
+
+
+
+<p>
+Alimento perro adulto carne 18kg
+</p>
+
+
+
+<h4>
+$29.990
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(63)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad63"
+value="1"
+min="1"
+>
+
+
+
+
+
+<button onclick="sumarCantidad(63)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Master Dog adulto carne 18kg',29990,63)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 64 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/masterdogadultorpequena18kg.jpeg" alt="Master Dog adulto raza pequeña 18kg">
+
+
+
+<h3>
+Master Dog
+</h3>
+
+
+
+<p>
+Alimento perro adulto raza pequeña 18kg
+</p>
+
+
+
+<h4>
+$29.990
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(64)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad64"
+value="1"
+min="1"
+>
+
+
+
+
+
+<button onclick="sumarCantidad(64)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Master Dog adulto raza pequeña 18kg',29990,64)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 65 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/masterdogsenior18kg.jpeg" alt="Master Dog senior 18kg">
+
+
+
+<h3>
+Master Dog
+</h3>
+
+
+
+<p>
+Alimento perro senior 18kg
+</p>
+
+
+
+<h4>
+$29.990
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(65)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad65"
+value="1"
+min="1"
+>
+
+
+
+
+
+<button onclick="sumarCantidad(65)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Master Dog senior 18kg',29990,65)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 66 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/mastercatsalmoncarne20kg.jpeg" alt="Master Cat salmón o carne 20kg">
+
+
+
+<h3>
+Master Cat
+</h3>
+
+
+
+<p>
+Alimento gato salmón o carne 20kg
+</p>
+
+
+
+<h4>
+$45.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(66)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad66"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(66)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Master Cat salmón o carne 20kg',45900,66)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 67 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/campingdogcachorro18kg.jpeg" alt="Camping Dog cachorro 18kg">
+
+
+
+<h3>
+Camping Dog
+</h3>
+
+
+
+<p>
+Alimento perro cachorro 18kg
+</p>
+
+
+
+<h4>
+$28.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(67)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad67"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(67)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Camping Dog cachorro 18kg',28900,67)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 68 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/campingdogadulto18kg.jpeg" alt="Camping Dog adulto 18kg">
+
+
+
+<h3>
+Camping Dog
+</h3>
+
+
+
+<p>
+Alimento perro adulto 18kg
+</p>
+
+
+
+<h4>
+$28.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(68)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad68"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(68)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Camping Dog adulto 18kg',28900,68)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 69 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/campingdograzapequena18kg.jpeg" alt="Camping Dog raza pequeña 18kg">
+
+
+
+<h3>
+Camping Dog
+</h3>
+
+
+
+<p>
+Alimento perro raza pequeña 18kg
+</p>
+
+
+
+<h4>
+$28.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(69)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad69"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(69)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Camping Dog raza pequeña 18kg',28900,69)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 70 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/campingdogsenior18kg.jpeg" alt="Camping Dog senior 18kg">
+
+
+
+<h3>
+Camping Dog
+</h3>
+
+
+
+<p>
+Alimento perro senior 18kg
+</p>
+
+
+
+<h4>
+$28.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(70)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad70"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(70)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Camping Dog senior 18kg',28900,70)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 71 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/championdogadulto165kg.jpeg" alt="Champion Dog adulto 16,5kg">
+
+
+
+<h3>
+Champion Dog
+</h3>
+
+
+
+<p>
+Alimento perro adulto 16,5kg
+</p>
+
+
+
+<h4>
+$24.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(71)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad71"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(71)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Champion Dog adulto 16,5kg',24900,71)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 72 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/purinacatchowpescado.jpeg" alt="Purina Cat Chow pescado">
+
+
+
+<h3>
+Purina Cat Chow
+</h3>
+
+
+
+<p>
+Alimento gato sabor pescado
+</p>
+
+
+
+<h4>
+$25.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(72)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad72"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(72)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Cat Chow pescado',25900,72)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 73 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/purinacatchowcarne.jpeg" alt="Purina Cat Chow carne">
+
+
+
+<h3>
+Purina Cat Chow
+</h3>
+
+
+
+<p>
+Alimento gato sabor carne
+</p>
+
+
+
+<h4>
+$25.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(73)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad73"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(73)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Cat Chow carne',25900,73)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 74 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/purinacatchowdelimix.jpeg" alt="Purina Cat Chow Delimix">
+
+
+
+<h3>
+Purina Cat Chow
+</h3>
+
+
+
+<p>
+Alimento gato Delimix
+</p>
+
+
+
+<h4>
+$25.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(74)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad74"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(74)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Cat Chow Delimix',25900,74)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 75 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/purinacatchowgatitos.jpeg" alt="Purina Cat Chow gatitos">
+
+
+
+<h3>
+Purina Cat Chow
+</h3>
+
+
+
+<p>
+Alimento gato gatitos
+</p>
+
+
+
+<h4>
+$25.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(75)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad75"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(75)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Cat Chow gatitos',25900,75)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 76 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/purinaproplanurinary3kg.jpeg" alt="Purina Proplan Urinary 3kg">
+
+
+
+<h3>
+Purina Proplan
+</h3>
+
+
+
+<p>
+Alimento perro Urinary 3kg
+</p>
+
+
+
+<h4>
+$32.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(76)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad76"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(76)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Proplan Urinary 3kg',32900,76)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 77 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/fitformulacachorro10kg.jpeg" alt="Fit Formula perro cachorro 10kg">
+
+
+
+<h3>
+Fit Formula
+</h3>
+
+
+
+<p>
+Alimento perro cachorro 10kg
+</p>
+
+
+
+<h4>
+$24.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(77)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad77"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(77)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Fit Formula perro cachorro 10kg',24900,77)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 78 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/fitformularazapequena10kg.jpeg" alt="Fit Formula adulto raza pequeña 10kg">
+
+
+
+<h3>
+Fit Formula
+</h3>
+
+
+
+<p>
+Alimento perro adulto raza pequeña 10kg
+</p>
+
+
+
+<h4>
+$23.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(78)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad78"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(78)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Fit Formula perro adulto raza pequeña 10kg',23900,78)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 79 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/fitformulagato10kg.jpeg" alt="Fit Formula gato 10kg">
+
+
+
+<h3>
+Fit Formula
+</h3>
+
+
+
+<p>
+Alimento gato 10kg
+</p>
+
+
+
+<h4>
+$27.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(79)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad79"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(79)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Fit Formula gato 10kg',27900,79)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 80 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/nomadesenior9kg.jpeg" alt="Nomade senior 9kg">
+
+
+
+<h3>
+Nomade
+</h3>
+
+
+
+<p>
+Alimento perro senior 9kg
+</p>
+
+
+
+<h4>
+$22.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(80)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad80"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(80)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Nomade senior 9kg',22900,80)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 81 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/nomadeadultorpequena10kg.jpeg" alt="Nomade perro adulto raza pequeña 10kg">
+
+
+
+<h3>
+Nomade
+</h3>
+
+
+
+<p>
+Alimento perro adulto raza pequeña 10kg
+</p>
+
+
+
+<h4>
+$22.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(81)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad81"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(81)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Nomade perro adulto raza pequeña 10kg',22900,81)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 82 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/nomadecachorro10kg.jpeg" alt="Nomade perro cachorro 10kg">
+
+
+
+<h3>
+Nomade
+</h3>
+
+
+
+<p>
+Alimento perro cachorro 10kg
+</p>
+
+
+
+<h4>
+$22.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(82)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad82"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(82)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Nomade perro cachorro 10kg',22900,82)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 83 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/nomadegato10kg.jpeg" alt="Nomade gato 10kg">
+
+
+
+<h3>
+Nomade
+</h3>
+
+
+
+<p>
+Alimento gato 10kg
+</p>
+
+
+
+<h4>
+$26.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(83)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad83"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(83)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Nomade gato 10kg',26900,83)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ================= PRODUCTO 84 ================= -->
+
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+
+<img src="imagenesmascotas/nomademedianagrande20kg.jpeg" alt="Nomade perro adulto raza mediana grande 20kg">
+
+
+
+<h3>
+Nomade
+</h3>
+
+
+
+<p>
+Alimento perro adulto raza mediana grande 20kg
+</p>
+
+
+
+<h4>
+$36.900
+</h4>
+
+
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(84)">
+-
+</button>
+
+
+
+
+<input 
+type="number"
+id="cantidad84"
+value="1"
+min="1"
+>
+
+
+
+
+<button onclick="sumarCantidad(84)">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Nomade perro adulto raza mediana grande 20kg',36900,84)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 85 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumcachorro3kg.jpeg" alt="Alfa Premium cachorro 3kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro cachorro 3kg
+</p>
+
+
+<h4>
+$8.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(85)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad85"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(85)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium cachorro 3kg',8900,85)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 86 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumsenior3kg.jpeg" alt="Alfa Premium senior 3kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro senior 3kg
+</p>
+
+
+<h4>
+$8.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(86)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad86"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(86)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium senior 3kg',8900,86)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 87 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumrazapequena3kg.jpeg" alt="Alfa Premium raza pequeña 3kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro raza pequeña 3kg
+</p>
+
+
+<h4>
+$8.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(87)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad87"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(87)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium raza pequeña 3kg',8900,87)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 88 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumseniorrazapequena3kg.jpeg" alt="Alfa Premium senior raza pequeña 3kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro senior raza pequeña 3kg
+</p>
+
+
+<h4>
+$8.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(88)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad88"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(88)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium senior raza pequeña 3kg',8900,88)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+<!-- ================= PRODUCTO 89 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumadulto3kg.jpeg" alt="Alfa Premium adulto 3kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro adulto 3kg
+</p>
+
+
+<h4>
+$8.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(89)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad89"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(89)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium adulto 3kg',8900,89)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 90 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumcachorro10kg.jpeg" alt="Alfa Premium cachorro 10kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro cachorro 10kg
+</p>
+
+
+<h4>
+$22.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(90)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad90"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(90)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium cachorro 10kg',22900,90)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 91 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumseniorrazapequena10kg.jpeg" alt="Alfa Premium senior raza pequeña 10kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro senior raza pequeña 10kg
+</p>
+
+
+<h4>
+$21.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(91)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad91"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(91)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium senior raza pequeña 10kg',21900,91)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 92 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumrazapequena10kg.jpeg" alt="Alfa Premium raza pequeña 10kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro raza pequeña 10kg
+</p>
+
+
+<h4>
+$21.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(92)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad92"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(92)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium raza pequeña 10kg',21900,92)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 93 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumcachorrorazapequena10kg.jpeg" alt="Alfa Premium cachorro raza pequeña 10kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro cachorro raza pequeña 10kg
+</p>
+
+
+<h4>
+$22.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(93)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad93"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(93)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium cachorro raza pequeña 10kg',22900,93)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 94 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfapremiumadulto20kg.jpeg" alt="Alfa Premium adulto 20kg">
+
+
+<h3>
+Alfa Premium
+</h3>
+
+
+<p>
+Alimento perro adulto 20kg
+</p>
+
+
+<h4>
+$35.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(94)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad94"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(94)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Premium adulto 20kg',35900,94)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 95 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfadog25kg.jpeg" alt="Alfa Dog perros medianos y grandes 25kg">
+
+
+<h3>
+Alfa Dog
+</h3>
+
+
+<p>
+Alimento perro medianos y grandes 25kg
+</p>
+
+
+<h4>
+$35.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(95)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad95"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(95)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Dog perros medianos y grandes 25kg',35900,95)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 96 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/alfacat10kg.jpeg" alt="Alfa Cat 10kg">
+
+
+<h3>
+Alfa Cat
+</h3>
+
+
+<p>
+Alimento gato 10kg
+</p>
+
+
+<h4>
+$27.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(96)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad96"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(96)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Alfa Cat 10kg',27900,96)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 97 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/maskocachorro10kg.jpeg" alt="Masko perro cachorro 10kg">
+
+
+<h3>
+Masko
+</h3>
+
+
+<p>
+Alimento perro cachorro 10kg
+</p>
+
+
+<h4>
+$16.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(97)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad97"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(97)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Masko perro cachorro 10kg',16900,97)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 98 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/maskoadulto10kg.jpeg" alt="Masko perro adulto 10kg">
+
+
+<h3>
+Masko
+</h3>
+
+
+<p>
+Alimento perro adulto 10kg
+</p>
+
+
+<h4>
+$15.500
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(98)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad98"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(98)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Masko perro adulto 10kg',15500,98)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 99 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/maskoadulto25kg.jpeg" alt="Masko perro adulto 25kg">
+
+
+<h3>
+Masko
+</h3>
+
+
+<p>
+Alimento perro adulto 25kg
+</p>
+
+
+<h4>
+$29.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(99)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad99"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(99)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Masko perro adulto 25kg',29900,99)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 100 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/sansonadulto10kg.jpeg" alt="Sansón adulto 10kg">
+
+
+<h3>
+Sansón
+</h3>
+
+
+<p>
+Alimento perro adulto 10kg
+</p>
+
+
+<h4>
+$13.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(100)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad100"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(100)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Sansón adulto 10kg',13900,100)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 101 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/sansonadulto25kg.jpeg" alt="Sansón adulto 25kg">
+
+
+<h3>
+Sansón
+</h3>
+
+
+<p>
+Alimento perro adulto 25kg
+</p>
+
+
+<h4>
+$29.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(101)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad101"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(101)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Sansón adulto 25kg',29900,101)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 102 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/cachupinadulto25kg.jpeg" alt="Cachupin adulto 25kg">
+
+
+<h3>
+Cachupin
+</h3>
+
+
+<p>
+Alimento perro adulto 25kg
+</p>
+
+
+<h4>
+$31.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(102)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad102"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(102)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Cachupin adulto 25kg',31900,102)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 103 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/cachupinadulto9kg.jpeg" alt="Cachupin adulto 9kg">
+
+
+<h3>
+Cachupin
+</h3>
+
+
+<p>
+Alimento perro adulto 9kg
+</p>
+
+
+<h4>
+$13.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(103)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad103"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(103)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Cachupin adulto 9kg',13900,103)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 104 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/tysonadulto25kg.jpeg" alt="Tyson perro adulto 25kg">
+
+
+<h3>
+Tyson
+</h3>
+
+
+<p>
+Alimento perro adulto 25kg
+</p>
+
+
+<h4>
+$24.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(104)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad104"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(104)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Tyson perro adulto 25kg',24900,104)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 105 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/strong25kg.jpeg" alt="Strong 25kg">
+
+
+<h3>
+Strong
+</h3>
+
+
+<p>
+Alimento perro 25kg
+</p>
+
+
+<h4>
+$37.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(105)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad105"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(105)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Strong 25kg',37900,105)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 106 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/strong10kg.jpeg" alt="Strong 10kg">
+
+
+<h3>
+Strong
+</h3>
+
+
+<p>
+Alimento perro 10kg
+</p>
+
+
+<h4>
+$17.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(106)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad106"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(106)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Strong 10kg',17900,106)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 107 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/atomdogadulto18kg.jpeg" alt="Atom Dog adulto 18kg">
+
+
+<h3>
+Atom Dog
+</h3>
+
+
+<p>
+Alimento perro adulto 18kg
+</p>
+
+
+<h4>
+$27.490
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(107)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad107"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(107)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Atom Dog adulto 18kg',27490,107)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 108 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/optymusperro.jpeg" alt="Optymus alimento premium perros">
+
+
+<h3>
+Optymus
+</h3>
+
+
+<p>
+Alimento premium para perros desde los 3 meses
+</p>
+
+
+<h4>
+$29.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(108)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad108"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(108)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Optymus alimento premium para perros desde los 3 meses',29900,108)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 109 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/bokatotradicional20kg.jpeg" alt="Bokato tradicional 20kg">
+
+
+<h3>
+Bokato
+</h3>
+
+
+<p>
+Alimento perro tradicional 20kg
+</p>
+
+
+<h4>
+$39.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(109)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad109"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(109)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Bokato tradicional 20kg',39900,109)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 110 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/cannesdog18kg.jpeg" alt="Cannes Dog adulto y cachorros 18kg">
+
+
+<h3>
+Cannes Dog
+</h3>
+
+
+<p>
+Alimento perro adulto y cachorros 18kg
+</p>
+
+
+<h4>
+$27.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(110)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad110"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(110)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Cannes Dog adulto y cachorros 18kg',27900,110)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 111 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/pedigreeadulto21kg.jpeg" alt="Pedigree adulto 21kg">
+
+
+<h3>
+Pedigree
+</h3>
+
+
+<p>
+Alimento perro adulto 21kg
+</p>
+
+
+<h4>
+$45.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(111)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad111"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(111)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Pedigree adulto 21kg',45900,111)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 112 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/toponeperro18kg.jpeg" alt="Top One perro adulto 18kg">
+
+
+<h3>
+Top One
+</h3>
+
+
+<p>
+Alimento perro adulto 18kg
+</p>
+
+
+<h4>
+$30.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(112)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad112"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(112)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Top One perro adulto 18kg',30900,112)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 113 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/toponegato9kg.jpeg" alt="Top One gato 9kg">
+
+
+<h3>
+Top One
+</h3>
+
+
+<p>
+Alimento gato 9kg
+</p>
+
+
+<h4>
+$22.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(113)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad113"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(113)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Top One gato 9kg',22900,113)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 114 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/mastercatsalmon20kg.jpeg" alt="Master Cat salmón 20kg">
+
+
+<h3>
+Master Cat
+</h3>
+
+
+<p>
+Alimento gato salmón 20kg
+</p>
+
+
+<h4>
+$45.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(114)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad114"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(114)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Master Cat salmón 20kg',45900,114)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 115 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/mastercatcarne20kg.jpeg" alt="Master Cat carne 20kg">
+
+
+<h3>
+Master Cat
+</h3>
+
+
+<p>
+Alimento gato carne 20kg
+</p>
+
+
+<h4>
+$45.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(115)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad115"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(115)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Master Cat carne 20kg',45900,115)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 116 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/purinacatshowpescado.jpeg" alt="Purina Cat Chow pescado">
+
+
+<h3>
+Purina Cat Chow
+</h3>
+
+
+<p>
+Alimento gato pescado
+</p>
+
+
+<h4>
+$25.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(116)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad116"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(116)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Cat Chow pescado',25900,116)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+<!-- ================= PRODUCTO 117 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/purinacatshowcarne.jpeg" alt="Purina Cat Chow carne">
+
+
+<h3>
+Purina Cat Chow
+</h3>
+
+
+<p>
+Alimento gato carne
+</p>
+
+
+<h4>
+$25.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(117)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad117"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(117)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Cat Chow carne',25900,117)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 118 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/purinacatshowdelimix.jpeg" alt="Purina Cat Chow Delimix">
+
+
+<h3>
+Purina Cat Chow
+</h3>
+
+
+<p>
+Alimento gato Delimix
+</p>
+
+
+<h4>
+$25.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(118)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad118"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(118)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Cat Chow Delimix',25900,118)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 119 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/purinacatshowgatitos.jpeg" alt="Purina Cat Chow gatitos">
+
+
+<h3>
+Purina Cat Chow
+</h3>
+
+
+<p>
+Alimento gato gatitos
+</p>
+
+
+<h4>
+$25.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(119)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad119"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(119)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Cat Chow gatitos',25900,119)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 120 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/purinaproplanurinari3kg.jpeg" alt="Purina Proplan urinari 3kg">
+
+
+<h3>
+Purina Proplan
+</h3>
+
+
+<p>
+Alimento gato urinari 3kg
+</p>
+
+
+<h4>
+$32.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(120)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad120"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(120)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Purina Proplan urinari 3kg',32900,120)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+<!-- ================= PRODUCTO 121 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/fitformulacachorro10kg.jpeg" alt="Fit Formula perro cachorro 10kg">
+
+
+<h3>
+Fit Formula
+</h3>
+
+
+<p>
+Alimento perro cachorro 10kg
+</p>
+
+
+<h4>
+$24.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(121)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad121"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(121)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Fit Formula perro cachorro 10kg',24900,121)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 122 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/fitformulapequena10kg.jpeg" alt="Fit Formula perro adulto raza pequeña 10kg">
+
+
+<h3>
+Fit Formula
+</h3>
+
+
+<p>
+Alimento perro adulto raza pequeña 10kg
+</p>
+
+
+<h4>
+$23.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(122)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad122"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(122)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Fit Formula perro adulto raza pequeña 10kg',23900,122)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 123 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/fitformulagato10kg.jpeg" alt="Fit Formula gato 10kg">
+
+
+<h3>
+Fit Formula
+</h3>
+
+
+<p>
+Alimento gato 10kg
+</p>
+
+
+<h4>
+$27.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(123)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad123"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(123)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Fit Formula gato 10kg',27900,123)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- ================= PRODUCTO 124 ================= -->
+
+<div class="product">
+
+
+<span class="stock">
+Disponible
+</span>
+
+
+<img src="imagenesmascotas/nomadesenior9kg.jpeg" alt="Nomade senior 9kg">
+
+
+<h3>
+Nomade
+</h3>
+
+
+<p>
+Alimento perro senior 9kg
+</p>
+
+
+<h4>
+$22.900
+</h4>
+
+
+
+<div class="quantity">
+
+
+<button onclick="restarCantidad(124)">
+-
+</button>
+
+
+
+<input 
+type="number"
+id="cantidad124"
+value="1"
+min="1"
+>
+
+
+
+<button onclick="sumarCantidad(124)">
++
+</button>
+
+
+</div>
+
+
+
+<button 
+class="cart-btn"
+onclick="agregarCarrito('Nomade senior 9kg',22900,124)"
+>
+
+Agregar al carrito
+
+</button>
+
+
+</div>

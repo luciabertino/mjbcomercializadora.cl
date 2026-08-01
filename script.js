@@ -1,118 +1,117 @@
-// ==============================
-// SLIDER DESLIZANTE
-// ==============================
+// ================= SLIDER =================
 
 
-let slideActual = 0;
+const slides = document.querySelector(".slides");
+const slideItems = document.querySelectorAll(".slide");
+
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
 
 
-const slidesContainer = document.querySelector(".slides");
-
-const slides = document.querySelectorAll(".slide");
-
-
-
-function moverSlider(){
-
-    slidesContainer.style.transform =
-    `translateX(-${slideActual * 100}%)`;
-
-}
+let currentSlide = 0;
 
 
 
-function siguienteSlide(){
+function mostrarSlide(){
 
-    slideActual++;
+    if(slides){
 
-    if(slideActual >= slides.length){
-
-        slideActual = 0;
+        slides.style.transform = 
+        `translateX(-${currentSlide * 100}%)`;
 
     }
 
-    moverSlider();
-
 }
 
 
 
-function anteriorSlide(){
 
-    slideActual--;
+if(next && prev && slides){
 
-    if(slideActual < 0){
 
-        slideActual = slides.length - 1;
+next.addEventListener("click",()=>{
+
+
+    currentSlide++;
+
+
+    if(currentSlide >= slideItems.length){
+
+        currentSlide = 0;
 
     }
 
-    moverSlider();
+
+    mostrarSlide();
+
+
+});
+
+
+
+
+
+prev.addEventListener("click",()=>{
+
+
+    currentSlide--;
+
+
+    if(currentSlide < 0){
+
+        currentSlide = slideItems.length - 1;
+
+    }
+
+
+    mostrarSlide();
+
+
+});
+
+
+
+
+setInterval(()=>{
+
+
+    currentSlide++;
+
+
+    if(currentSlide >= slideItems.length){
+
+        currentSlide = 0;
+
+    }
+
+
+    mostrarSlide();
+
+
+},5000);
+
+
 
 }
 
 
 
-document.getElementById("next")?.addEventListener(
-"click",
-siguienteSlide
-);
 
 
 
-document.getElementById("prev")?.addEventListener(
-"click",
-anteriorSlide
-);
+// ================= CANTIDADES =================
 
 
-
-if(slides.length > 0){
-
-    setInterval(siguienteSlide,5000);
-
-}
-
-
-
-
-// ==============================
-// CARRITO
-// ==============================
-
-
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-
-
-// cantidades temporales de productos
-
-let cantidades = [
-    1,
-    1,
-    1,
-    1,
-    1,
-    1
-];
-
-
-
-
-// SUMAR CANTIDAD
 
 function sumarCantidad(id){
 
 
-    cantidades[id]++;
-
-
     let input = document.getElementById("cantidad"+id);
 
 
     if(input){
 
-        input.value = cantidades[id];
+        input.value = Number(input.value) + 1;
 
     }
 
@@ -122,46 +121,73 @@ function sumarCantidad(id){
 
 
 
-// RESTAR CANTIDAD
 
 function restarCantidad(id){
 
 
-    if(cantidades[id] > 1){
-
-        cantidades[id]--;
-
-    }
-
-
     let input = document.getElementById("cantidad"+id);
 
 
-    if(input){
 
-        input.value = cantidades[id];
+    if(input && Number(input.value)>1){
+
+
+        input.value = Number(input.value)-1;
+
 
     }
 
 
 }
 
+// ================= CARRITO =================
+
+
+
+let carrito = [];
+
+
+
+const cartCount = document.getElementById("cart-count");
+
+const listaCarrito = document.getElementById("listaCarrito");
+
+const total = document.getElementById("total");
 
 
 
 
-// AGREGAR AL CARRITO
+
+
 
 function agregarCarrito(nombre, precio, id){
 
 
-    let cantidad = cantidades[id];
+
+    let input = document.getElementById("cantidad"+id);
+
+
+
+    let cantidad = 1;
+
+
+
+    if(input){
+
+        cantidad = Number(input.value);
+
+    }
+
 
 
 
     let producto = carrito.find(
+
         item => item.nombre === nombre
+
     );
+
+
 
 
 
@@ -176,11 +202,13 @@ function agregarCarrito(nombre, precio, id){
 
         carrito.push({
 
+
             nombre:nombre,
 
             precio:precio,
 
             cantidad:cantidad
+
 
         });
 
@@ -189,80 +217,39 @@ function agregarCarrito(nombre, precio, id){
 
 
 
-    guardarCarrito();
-
 
     actualizarCarrito();
 
 
 
-    alert("Producto agregado al carrito 🛒");
-
-
 }
 
 
 
 
 
-// GUARDAR
-
-function guardarCarrito(){
 
 
-    localStorage.setItem(
-
-        "carrito",
-
-        JSON.stringify(carrito)
-
-    );
-
-
-}
-
-
-
-
-
-// MOSTRAR CARRITO
 
 
 function actualizarCarrito(){
 
 
 
-const lista = document.getElementById("listaCarrito");
-
-const contador = document.getElementById("cart-count");
-
-const total = document.getElementById("total");
+    if(!listaCarrito) return;
 
 
 
-if(!lista) return;
+    listaCarrito.innerHTML = "";
 
 
 
-lista.innerHTML="";
+    let suma = 0;
+
+    let cantidadTotal = 0;
 
 
 
-let suma = 0;
-
-let cantidadTotal = 0;
-
-
-
-if(carrito.length === 0){
-
-
-    lista.innerHTML = 
-    "<p>Tu carrito está vacío</p>";
-
-
-
-}else{
 
 
 
@@ -277,39 +264,31 @@ if(carrito.length === 0){
 
 
 
-        lista.innerHTML += `
+
+
+        listaCarrito.innerHTML += `
+
+
 
         <div class="item-carrito">
 
 
-        <h4>${producto.nombre}</h4>
+            <h4>
+            ${producto.nombre}
+            </h4>
 
 
-        <p>
-        $${producto.precio.toLocaleString("es-CL")}
-        </p>
-
-
-        <button onclick="cambiarCantidad(${index},-1)">
-        -
-        </button>
-
-
-        <span>
-        ${producto.cantidad}
-        </span>
-
-
-        <button onclick="cambiarCantidad(${index},1)">
-        +
-        </button>
+            <p>
+            ${producto.cantidad} x $${producto.precio}
+            </p>
 
 
 
-        <button onclick="eliminarProducto(${index})">
-        🗑
-        </button>
+            <button onclick="eliminarProducto(${index})">
 
+            Eliminar
+
+            </button>
 
 
         </div>
@@ -323,56 +302,44 @@ if(carrito.length === 0){
 
 
 
-}
-
-
-
-if(contador){
-
-    contador.textContent = cantidadTotal;
-
-}
-
-
-
-if(total){
-
-    total.textContent =
-    "$"+suma.toLocaleString("es-CL");
-
-}
-
-
-
-}
 
 
 
 
-
-// CAMBIAR CANTIDAD DEL CARRITO
-
-
-function cambiarCantidad(index,cambio){
+    if(carrito.length === 0){
 
 
-    carrito[index].cantidad += cambio;
+        listaCarrito.innerHTML =
 
-
-
-    if(carrito[index].cantidad <=0){
-
-
-        carrito.splice(index,1);
+        "<p>Tu carrito está vacío</p>";
 
 
     }
 
 
 
-    guardarCarrito();
 
-    actualizarCarrito();
+
+
+    if(cartCount){
+
+        cartCount.textContent = cantidadTotal;
+
+    }
+
+
+
+
+
+
+    if(total){
+
+        total.textContent = 
+
+        "$" + suma.toLocaleString("es-CL");
+
+    }
+
 
 
 }
@@ -381,7 +348,8 @@ function cambiarCantidad(index,cambio){
 
 
 
-// ELIMINAR PRODUCTO
+
+
 
 
 function eliminarProducto(index){
@@ -390,65 +358,47 @@ function eliminarProducto(index){
     carrito.splice(index,1);
 
 
-    guardarCarrito();
-
     actualizarCarrito();
 
 
-}
-
-
-
-
-
-
-// ==============================
-// ABRIR Y CERRAR CARRITO
-// ==============================
-
-
-const abrirCarrito =
-document.getElementById("abrirCarrito");
-
-
-const cerrarCarrito =
-document.getElementById("cerrarCarrito");
-
-
-const panel =
-document.getElementById("carritoPanel");
-
-
-
-
-
-if(abrirCarrito){
-
-
-abrirCarrito.addEventListener("click",()=>{
-
-
-    panel.classList.add("activo");
-
-
-});
-
 
 }
 
 
 
 
-if(cerrarCarrito){
 
 
-cerrarCarrito.addEventListener("click",()=>{
 
 
-    panel.classList.remove("activo");
+
+// ================= ABRIR Y CERRAR CARRITO =================
 
 
-});
+
+
+const abrirCarrito = document.getElementById("abrirCarrito");
+
+const cerrarCarrito = document.getElementById("cerrarCarrito");
+
+const carritoPanel = document.getElementById("carritoPanel");
+
+
+
+
+
+
+
+if(abrirCarrito && carritoPanel){
+
+
+    abrirCarrito.addEventListener("click",()=>{
+
+
+        carritoPanel.classList.add("active");
+
+
+    });
 
 
 }
@@ -457,13 +407,29 @@ cerrarCarrito.addEventListener("click",()=>{
 
 
 
-// ==============================
-// BUSCADOR
-// ==============================
 
 
-const buscador =
-document.getElementById("buscar");
+
+if(cerrarCarrito && carritoPanel){
+
+
+    cerrarCarrito.addEventListener("click",()=>{
+
+
+        carritoPanel.classList.remove("active");
+
+
+    });
+
+
+}
+
+
+// ================= BUSCADOR =================
+
+
+
+const buscador = document.getElementById("buscar");
 
 
 
@@ -471,52 +437,22 @@ if(buscador){
 
 
 
-buscador.addEventListener("keyup",()=>{
+    buscador.addEventListener("keyup",()=>{
+
+
+        let texto = buscador.value.toLowerCase().trim();
 
 
 
-let texto =
-buscador.value.toLowerCase();
+        // Más adelante aquí conectaremos productos.js
 
 
 
-let productos =
-document.querySelectorAll(".product");
+        console.log("Buscando:", texto);
 
 
 
-productos.forEach(producto=>{
-
-
-
-let nombre =
-producto.querySelector("h3")
-.textContent
-.toLowerCase();
-
-
-
-if(nombre.includes(texto)){
-
-
-producto.style.display="block";
-
-
-}else{
-
-
-producto.style.display="none";
-
-
-}
-
-
-
-});
-
-
-
-});
+    });
 
 
 
@@ -526,126 +462,104 @@ producto.style.display="none";
 
 
 
-// CARGAR CARRITO AL INICIAR
-
-actualizarCarrito();
 
 
-// ==============================
-// ENVIAR PEDIDO POR WHATSAPP
-// ==============================
+// ================= WHATSAPP =================
+
+
 
 
 const whatsappBtn = document.getElementById("whatsappBtn");
 
 
+
+
+
 if(whatsappBtn){
+
 
 
 whatsappBtn.addEventListener("click",()=>{
 
 
-let nombre =
-document.getElementById("nombreCliente").value;
 
-
-let telefono =
-document.getElementById("telefonoCliente").value;
-
-
-let direccion =
-document.getElementById("direccionCliente").value;
-
-
-let pago =
-document.getElementById("pagoCliente").value;
+    let nombreCliente = 
+    document.getElementById("nombreCliente")?.value || "";
 
 
 
-
-if(carrito.length === 0){
-
-alert("El carrito está vacío");
-
-return;
-
-}
+    let telefonoCliente = 
+    document.getElementById("telefonoCliente")?.value || "";
 
 
 
-if(nombre==="" || direccion==="" || pago===""){
-
-
-alert("Completa los datos del pedido");
-
-return;
-
-
-}
+    let direccionCliente = 
+    document.getElementById("direccionCliente")?.value || "";
 
 
 
-let mensaje = 
-`Hola MJB 👋%0A%0AQuiero realizar el siguiente pedido:%0A%0A`;
-
-
-
-let total = 0;
-
-
-
-carrito.forEach(producto=>{
-
-
-let subtotal =
-producto.precio * producto.cantidad;
-
-
-total += subtotal;
-
-
-
-mensaje += 
-`🛒 ${producto.nombre} x${producto.cantidad} - $${subtotal.toLocaleString("es-CL")}%0A`;
-
-
-});
-
-
-
-mensaje +=
-`%0A💰 Total: $${total.toLocaleString("es-CL")}%0A%0A`;
-
-
-
-mensaje +=
-`👤 Nombre: ${nombre}%0A`;
-
-mensaje +=
-`📱 Teléfono: ${telefono}%0A`;
-
-mensaje +=
-`📍 Dirección: ${direccion}%0A`;
-
-mensaje +=
-`💳 Forma de pago: ${pago}`;
+    let pagoCliente = 
+    document.getElementById("pagoCliente")?.value || "";
 
 
 
 
 
-let numero = "56964240040";
+
+    let mensaje = 
+    "Hola MJB, quiero realizar un pedido:%0A%0A";
 
 
 
-window.open(
-"https://wa.me/"+numero+"?text="+mensaje,
-"_blank"
-);
+
+
+
+
+    carrito.forEach(producto=>{
+
+
+
+        mensaje += 
+
+        `• ${producto.nombre} x${producto.cantidad} - $${producto.precio * producto.cantidad}%0A`;
+
+
+
+    });
+
+
+
+
+
+
+
+    mensaje += `%0ACliente: ${nombreCliente}`;
+
+    mensaje += `%0ATeléfono: ${telefonoCliente}`;
+
+    mensaje += `%0ADirección: ${direccionCliente}`;
+
+    mensaje += `%0AForma de pago: ${pagoCliente}`;
+
+
+
+
+
+
+
+
+    window.open(
+
+    "https://wa.me/56964240040?text=" + mensaje,
+
+    "_blank"
+
+    );
 
 
 
 });
+
 
 
 }

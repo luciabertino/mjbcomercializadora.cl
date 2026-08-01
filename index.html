@@ -39,7 +39,7 @@
 
 <div class="business-bar">
 
-🚚 Distribuidora MJB | Limpieza, hogar y consumo
+🚚 Comercializadora MJB | Limpieza, hogar y consumo
 
 </div>
 
@@ -91,14 +91,14 @@ placeholder="Buscar productos..."
 <div class="icons">
 
 
-<a href="mailto:ventas@mjbspa.cl">
+<a href="mailto:mjbcomercializadora@gmail.com">
 
 <i class="fa-solid fa-envelope"></i>
 
 </a>
 
 
-<a href="https://instagram.com/mjbspa" target="_blank">
+<a href="https://instagram.com/mjb_comercializadora" target="_blank">
 
 <i class="fa-brands fa-instagram"></i>
 
@@ -402,7 +402,9 @@ Enviar pedido por WhatsApp
             📦 Pedidos por cantidad | 💬 Cotiza con nosotros
         </p>
 
-        <a href="#" class="btn-comerciante">
+        <a href="https://wa.me/56984996669?text=Hola%2C%20quisiera%20consultar%20por%20precios%20comerciante.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20los%20productos%20y%20pedidos%20por%20cantidad."
+           class="btn-comerciante"
+           target="_blank">
             💬 Solicitar precio comerciante
         </a>
 
@@ -544,463 +546,360 @@ Mascotas
 
 <!-- ================= PRODUCTOS DESTACADOS ================= -->
 
-
 <section class="products" id="productos">
 
-
+```
 <div class="section-title">
 
-<h2>
-Productos destacados
-</h2>
+    <h2>
+        Productos destacados
+    </h2>
 
 </div>
-
 
 
 <div class="product-grid">
 
 
+    <!-- ================= GOMUGOMU ================= -->
 
-<!-- PRODUCTO 1 -->
+    <div class="product">
 
-<div class="product">
+        <span class="stock">
+            Disponible
+        </span>
 
+        <img src="imageneslimpieza/gomugomu.jpeg" alt="GomuGomu 5LT">
 
-<span class="stock">
-Disponible
-</span>
+        <h3>
+            GomuGomu
+        </h3>
 
+        <p>
+            Detergente líquido + suavizante 5LT
+        </p>
 
-<img src="imagenes/shopnowlavanda.jpg">
-
-
-<h3>
-Lavandina 5L
-</h3>
-
-
-<p>
-Cloro activo
-</p>
-
-
-<h4>
-$1.890
-</h4>
+        <h4>
+            $2.200
+        </h4>
 
 
+        <div class="quantity">
 
-<div class="quantity">
+            <button onclick="restarCantidad(38)">
+                -
+            </button>
+
+            <input
+                type="number"
+                id="cantidad38"
+                value="1"
+                min="1"
+            >
+
+            <button onclick="sumarCantidad(38)">
+                +
+            </button>
+
+        </div>
 
 
-<button onclick="restarCantidad(0)">
--
-</button>
+        <button
+            class="cart-btn"
+            onclick="agregarCarrito('GomuGomu 5lt',2200,38)"
+        >
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
 
 
-<input 
-type="number"
-id="cantidad0"
-value="1"
-min="1"
->
+
+    <!-- ================= OVELLA XL ================= -->
+
+    <div class="product">
+
+        <span class="stock">
+            Disponible
+        </span>
+
+        <img src="imageneslimpieza/ovellaxl.jpeg" alt="Ovella XL Toalla de papel">
+
+        <h3>
+            Ovella XL
+        </h3>
+
+        <p>
+            Toalla de papel doble hoja 80 metros
+        </p>
+
+        <h4>
+            $1.950
+        </h4>
 
 
-<button onclick="sumarCantidad(0)">
-+
-</button>
+        <div class="quantity">
+
+            <button onclick="restarCantidad(34)">
+                -
+            </button>
+
+            <input
+                type="number"
+                id="cantidad34"
+                value="1"
+                min="1"
+            >
+
+            <button onclick="sumarCantidad(34)">
+                +
+            </button>
+
+        </div>
+
+
+        <button
+            class="cart-btn"
+            onclick="agregarCarrito('Ovella xl toalla de papel',1950,34)"
+        >
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= QUIX ================= -->
+
+    <div class="product">
+
+        <span class="stock">
+            Disponible
+        </span>
+
+        <img src="imageneslimpieza/quixultraazul.jpeg" alt="Quix UltraConcentrado 200ml">
+
+        <h3>
+            Quix UltraConcentrado
+        </h3>
+
+        <p>
+            Lavalozas 200ml
+        </p>
+
+        <h4>
+            $1.400
+        </h4>
+
+
+        <div class="quantity">
+
+            <button onclick="restarCantidad(30)">
+                -
+            </button>
+
+            <input
+                type="number"
+                id="cantidad30"
+                value="1"
+                min="1"
+            >
+
+            <button onclick="sumarCantidad(30)">
+                +
+            </button>
+
+        </div>
+
+
+        <button
+            class="cart-btn"
+            onclick="agregarCarrito('Quix UltraConcentrado 200ml',1400,30)"
+        >
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= CLORO 5LT ================= -->
+
+    <div class="product">
+
+        <span class="stock">
+            Disponible
+        </span>
+
+        <img src="imageneslimpieza/cloro.jpeg" alt="Cloro 5LT">
+
+        <h3>
+            Cloro 5LT
+        </h3>
+
+        <p>
+            Máxima Limpieza
+        </p>
+
+        <h4>
+            $2.400
+        </h4>
+
+
+        <div class="quantity">
+
+            <button onclick="restarCantidad(37)">
+                -
+            </button>
+
+            <input
+                type="number"
+                id="cantidad37"
+                value="1"
+                min="1"
+            >
+
+            <button onclick="sumarCantidad(37)">
+                +
+            </button>
+
+        </div>
+
+
+        <button
+            class="cart-btn"
+            onclick="agregarCarrito('Cloro 5lt',2400,37)"
+        >
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= AROMAX LAVANDA ================= -->
+
+    <div class="product">
+
+        <span class="stock">
+            Disponible
+        </span>
+
+        <img src="imageneslimpieza/aromaxlavanda.jpeg" alt="Aromax Aroma Lavanda 1800cc">
+
+        <h3>
+            Aromax
+        </h3>
+
+        <p>
+            Limpiador multiuso Aroma Lavanda 1.800cc
+        </p>
+
+        <h4>
+            $1.550
+        </h4>
+
+
+        <div class="quantity">
+
+            <button onclick="restarCantidad(23)">
+                -
+            </button>
+
+            <input
+                type="number"
+                id="cantidad23"
+                value="1"
+                min="1"
+            >
+
+            <button onclick="sumarCantidad(23)">
+                +
+            </button>
+
+        </div>
+
+
+        <button
+            class="cart-btn"
+            onclick="agregarCarrito('Aromax Aroma Lavanda 1800cc',1550,23)"
+        >
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= PARMA SPAGHETTI ================= -->
+
+    <div class="product">
+
+        <span class="stock">
+            Disponible
+        </span>
+
+        <img src="imagenesabarrote/parmaspaghetti.jpeg" alt="Parma Spaghetti 5 400g">
+
+        <h3>
+            Parma
+        </h3>
+
+        <p>
+            Spaghetti 5 400g
+        </p>
+
+        <h4>
+            $750
+        </h4>
+
+
+        <div class="quantity">
+
+            <button onclick="restarCantidad(46)">
+                -
+            </button>
+
+            <input
+                type="number"
+                id="cantidad46"
+                value="1"
+                min="1"
+            >
+
+            <button onclick="sumarCantidad(46)">
+                +
+            </button>
+
+        </div>
+
+
+        <button
+            class="cart-btn"
+            onclick="agregarCarrito('Parma Spaghetti 5 400g',750,46)"
+        >
+
+            Agregar al carrito
+
+        </button>
+
+    </div>
 
 
 </div>
-
-
-
-<button 
-class="cart-btn"
-onclick="agregarCarrito('Lavandina 5L',1890,0)"
->
-
-Agregar al carrito
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- PRODUCTO 2 -->
-
-
-<div class="product">
-
-
-<span class="stock">
-Disponible
-</span>
-
-
-<img src="imagenes/excelquitagrasa500ml.jpg">
-
-
-<h3>
-Detergente Quix
-</h3>
-
-
-<p>
-Limpieza cocina
-</p>
-
-
-<h4>
-$1.290
-</h4>
-
-
-
-<div class="quantity">
-
-
-<button onclick="restarCantidad(1)">
--
-</button>
-
-
-<input 
-type="number"
-id="cantidad1"
-value="1"
-min="1"
->
-
-
-<button onclick="sumarCantidad(1)">
-+
-</button>
-
-
-</div>
-
-
-
-<button 
-class="cart-btn"
-onclick="agregarCarrito('Detergente Quix',1290,1)"
->
-
-Agregar al carrito
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- PRODUCTO 3 -->
-
-
-<div class="product">
-
-
-<span class="stock">
-Disponible
-</span>
-
-
-<img src="img/productos/3.png">
-
-
-<h3>
-Papel Higiénico Elite
-</h3>
-
-
-<p>
-Pack familiar
-</p>
-
-
-<h4>
-$2.490
-</h4>
-
-
-
-<div class="quantity">
-
-
-<button onclick="restarCantidad(2)">
--
-</button>
-
-
-<input 
-type="number"
-id="cantidad2"
-value="1"
-min="1"
->
-
-
-<button onclick="sumarCantidad(2)">
-+
-</button>
-
-
-</div>
-
-
-
-<button 
-class="cart-btn"
-onclick="agregarCarrito('Papel Higiénico Elite',2490,2)"
->
-
-Agregar al carrito
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- PRODUCTO 4 -->
-
-
-<div class="product">
-
-
-<span class="stock">
-Disponible
-</span>
-
-
-<img src="img/productos/4.png">
-
-
-<h3>
-Arroz Tucapel
-</h3>
-
-
-<p>
-Grano largo
-</p>
-
-
-<h4>
-$1.790
-</h4>
-
-
-
-<div class="quantity">
-
-
-<button onclick="restarCantidad(3)">
--
-</button>
-
-
-<input 
-type="number"
-id="cantidad3"
-value="1"
-min="1"
->
-
-
-<button onclick="sumarCantidad(3)">
-+
-</button>
-
-
-</div>
-
-
-
-<button 
-class="cart-btn"
-onclick="agregarCarrito('Arroz Tucapel',1790,3)"
->
-
-Agregar al carrito
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- PRODUCTO 5 -->
-
-
-<div class="product">
-
-
-<span class="stock">
-Disponible
-</span>
-
-
-<img src="img/productos/5.png">
-
-
-<h3>
-Café
-</h3>
-
-
-<p>
-Café instantáneo
-</p>
-
-
-<h4>
-$3.490
-</h4>
-
-
-
-<div class="quantity">
-
-
-<button onclick="restarCantidad(4)">
--
-</button>
-
-
-<input 
-type="number"
-id="cantidad4"
-value="1"
-min="1"
->
-
-
-<button onclick="sumarCantidad(4)">
-+
-</button>
-
-
-</div>
-
-
-
-<button 
-class="cart-btn"
-onclick="agregarCarrito('Café',3490,4)"
->
-
-Agregar al carrito
-
-</button>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- PRODUCTO 6 -->
-
-
-<div class="product">
-
-
-<span class="stock">
-Disponible
-</span>
-
-
-<img src="img/productos/6.png">
-
-
-<h3>
-Azúcar
-</h3>
-
-
-<p>
-Azúcar granulada
-</p>
-
-
-<h4>
-$1.390
-</h4>
-
-
-
-<div class="quantity">
-
-
-<button onclick="restarCantidad(5)">
--
-</button>
-
-
-<input 
-type="number"
-id="cantidad5"
-value="1"
-min="1"
->
-
-
-<button onclick="sumarCantidad(5)">
-+
-</button>
-
-
-</div>
-
-
-
-<button 
-class="cart-btn"
-onclick="agregarCarrito('Azúcar',1390,5)"
->
-
-Agregar al carrito
-
-</button>
-
-
-</div>
-
-
-
-
-</div>
-
+```
 
 </section>
-
 
 <!-- ================= MARCAS ================= -->
 
@@ -1024,17 +923,17 @@ Marcas que distribuimos
 <div class="brand-slider">
 
 
-<img src="img/marcas/omo.png">
+<img src="imagenes/excelllogo.png">
 
-<img src="img/marcas/poett.png">
+<img src="imagenes/activepluslogo.png">
 
-<img src="img/marcas/elite.png">
+<img src="imagenes/familandlogo.png">
 
-<img src="img/marcas/virutex.png">
+<img src="imagenes/tionachologo.png">
 
-<img src="img/marcas/quix.png">
+<img src="imagenes/omologo.png">
 
-<img src="img/marcas/arom.png">
+<img src="imagenes/lucchettilogo.png">
 
 
 </div>
@@ -1053,73 +952,141 @@ Marcas que distribuimos
 
 <section class="offers" id="ofertas">
 
-    <div class="section-title">
-        <h2>Ofertas imperdibles</h2>
-    </div>
+```
+<div class="section-title">
 
-    <div class="offer-grid">
-
-        <!-- Oferta 1 -->
-        <div class="offer-card">
-
-            <img src="img/ofertas/1.png" alt="Lavandina 2L">
-
-            <h3>Lavandina 2L</h3>
-
-            <span>$1.090</span>
-
-            <button class="btn-offer" onclick="agregarAlCarrito(81); cambiarBoton(this)">
-                🛒 Agregar al carrito
-            </button>
-
-        </div>
-
-        <!-- Oferta 2 -->
-        <div class="offer-card">
-
-            <img src="img/ofertas/2.png" alt="Poett">
-
-            <h3>Poett</h3>
-
-            <span>$2.390</span>
-
-            <button class="btn-offer" onclick="agregarAlCarrito(82); cambiarBoton(this)">
-                🛒 Agregar al carrito
-            </button>
-
-        </div>
-
-        <!-- Oferta 3 -->
-        <div class="offer-card">
-
-    <img src="img/ofertas/3.png" alt="Papel Elite">
-
-    <h3>Papel Elite</h3>
-
-    <span>$1.790</span>
-
-    <button class="btn-offer" onclick="agregarAlCarrito(83); cambiarBoton(this)">
-        🛒 Agregar al carrito
-    </button>
+    <h2>
+        Ofertas imperdibles
+    </h2>
 
 </div>
 
-        <!-- Oferta 4 -->
-        <div class="offer-card">
 
-            <img src="img/ofertas/4.png" alt="OMO">
+<div class="offer-grid">
 
-            <h3>OMO</h3>
 
-            <span>$2.190</span>
+    <!-- ================= OFERTA 1 ================= -->
 
-            <button class="btn-offer" onclick="agregarAlCarrito(84); cambiarBoton(this)">
-                🛒 Agregar al carrito
-            </button>
+    <div class="offer-card">
 
-        </div>
+        <img 
+            src="imagenesofertas/promofideosalsa.jpeg" 
+            alt="2 Spaghetti + salsa"
+        >
+
+        <h3>
+            2 Spaghetti + salsa
+        </h3>
+
+        <span>
+            $1.700
+        </span>
+
+        <button 
+            class="btn-offer"
+            onclick="agregarOferta('2 Spaghetti + salsa',1700); cambiarBoton(this)"
+        >
+
+            🛒 Agregar al carrito
+
+        </button>
 
     </div>
+
+
+
+    <!-- ================= OFERTA 2 ================= -->
+
+    <div class="offer-card">
+
+        <img 
+            src="imagenesofertas/promo2omos.jpeg" 
+            alt="2 OMO para diluir"
+        >
+
+        <h3>
+            2 OMO para diluir
+        </h3>
+
+        <span>
+            $8.800
+        </span>
+
+        <button 
+            class="btn-offer"
+            onclick="agregarOferta('2 OMO para diluir',8800); cambiarBoton(this)"
+        >
+
+            🛒 Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= OFERTA 3 ================= -->
+
+    <div class="offer-card">
+
+        <img 
+            src="imagenesofertas/promoquixbolsa.jpeg" 
+            alt="Quix + bolsa de basura"
+        >
+
+        <h3>
+
+            Quix + bolsa de basura
+        </h3>
+
+        <span>
+            $2.000
+        </span>
+
+        <button 
+            class="btn-offer"
+            onclick="agregarOferta('Quix + bolsa de basura',2000); cambiarBoton(this)"
+        >
+
+            🛒 Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= OFERTA 4 ================= -->
+
+    <div class="offer-card">
+
+        <img 
+            src="imageneshigiene/tionachoshampacndultrah.jpeg" 
+            alt="Tío Nacho shampoo y acondicionador"
+        >
+
+        <h3>
+          TíoNacho Shampoo+acondicionador
+        </h3>
+
+        <span>
+            $10.000
+        </span>
+
+        <button 
+            class="btn-offer"
+            onclick="agregarOferta('Tío Nacho shampoo + acondicionador',10000); cambiarBoton(this)"
+        >
+
+            🛒 Agregar al carrito
+
+        </button>
+
+    </div>
+
+
+</div>
+```
 
 </section>
 
@@ -1141,7 +1108,7 @@ Marcas que distribuimos
 <div class="footer-logo">
 
 
-<img src="imagenes/logopng.png">
+<img src="imagenes/mjb.png">
 
 
 <p>

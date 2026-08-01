@@ -16,7 +16,7 @@ function mostrarSlide(){
 
     if(slides){
 
-        slides.style.transform = 
+        slides.style.transform =
         `translateX(-${currentSlide * 100}%)`;
 
     }
@@ -29,66 +29,66 @@ function mostrarSlide(){
 if(next && prev && slides){
 
 
-next.addEventListener("click",()=>{
+    next.addEventListener("click",()=>{
 
 
-    currentSlide++;
+        currentSlide++;
 
 
-    if(currentSlide >= slideItems.length){
+        if(currentSlide >= slideItems.length){
 
-        currentSlide = 0;
+            currentSlide = 0;
 
-    }
-
-
-    mostrarSlide();
+        }
 
 
-});
+        mostrarSlide();
 
 
-
-
-
-prev.addEventListener("click",()=>{
-
-
-    currentSlide--;
-
-
-    if(currentSlide < 0){
-
-        currentSlide = slideItems.length - 1;
-
-    }
-
-
-    mostrarSlide();
-
-
-});
+    });
 
 
 
 
-setInterval(()=>{
+
+    prev.addEventListener("click",()=>{
 
 
-    currentSlide++;
+        currentSlide--;
 
 
-    if(currentSlide >= slideItems.length){
+        if(currentSlide < 0){
 
-        currentSlide = 0;
+            currentSlide = slideItems.length - 1;
 
-    }
-
-
-    mostrarSlide();
+        }
 
 
-},5000);
+        mostrarSlide();
+
+
+    });
+
+
+
+
+    setInterval(()=>{
+
+
+        currentSlide++;
+
+
+        if(currentSlide >= slideItems.length){
+
+            currentSlide = 0;
+
+        }
+
+
+        mostrarSlide();
+
+
+    },5000);
 
 
 
@@ -122,6 +122,7 @@ function sumarCantidad(id){
 
 
 
+
 function restarCantidad(id){
 
 
@@ -129,16 +130,18 @@ function restarCantidad(id){
 
 
 
-    if(input && Number(input.value)>1){
+    if(input && Number(input.value) > 1){
 
 
-        input.value = Number(input.value)-1;
+        input.value = Number(input.value) - 1;
 
 
     }
 
 
 }
+
+
 
 // ================= CARRITO =================
 
@@ -203,11 +206,11 @@ function agregarCarrito(nombre, precio, id){
         carrito.push({
 
 
-            nombre:nombre,
+            nombre: nombre,
 
-            precio:precio,
+            precio: precio,
 
-            cantidad:cantidad
+            cantidad: cantidad
 
 
         });
@@ -266,6 +269,7 @@ function actualizarCarrito(){
 
 
 
+
         listaCarrito.innerHTML += `
 
 
@@ -274,19 +278,19 @@ function actualizarCarrito(){
 
 
             <h4>
-            ${producto.nombre}
+                ${producto.nombre}
             </h4>
 
 
             <p>
-            ${producto.cantidad} x $${producto.precio}
+                ${producto.cantidad} x $${producto.precio.toLocaleString("es-CL")}
             </p>
 
 
 
             <button onclick="eliminarProducto(${index})">
 
-            Eliminar
+                Eliminar
 
             </button>
 
@@ -321,6 +325,7 @@ function actualizarCarrito(){
 
 
 
+
     if(cartCount){
 
         cartCount.textContent = cantidadTotal;
@@ -332,9 +337,10 @@ function actualizarCarrito(){
 
 
 
+
     if(total){
 
-        total.textContent = 
+        total.textContent =
 
         "$" + suma.toLocaleString("es-CL");
 
@@ -369,11 +375,96 @@ function eliminarProducto(index){
 
 
 
+// ================= OFERTAS =================
+
+
+
+function agregarOferta(nombre, precio){
+
+
+    let producto = carrito.find(
+
+        item => item.nombre === nombre
+
+    );
+
+
+
+    if(producto){
+
+
+        producto.cantidad += 1;
+
+
+    }else{
+
+
+        carrito.push({
+
+
+            nombre: nombre,
+
+            precio: precio,
+
+            cantidad: 1
+
+
+        });
+
+
+    }
+
+
+
+    actualizarCarrito();
+
+
+
+}
+
+
+
+
+
+
+// ================= BOTÓN OFERTA =================
+
+
+
+function cambiarBoton(boton){
+
+
+    boton.textContent = "✓ Agregado";
+
+
+    boton.disabled = true;
+
+
+
+    setTimeout(()=>{
+
+
+        boton.textContent = "🛒 Agregar al carrito";
+
+
+        boton.disabled = false;
+
+
+    },1500);
+
+
+
+}
+
+
+
+
+
+
 
 
 
 // ================= ABRIR Y CERRAR CARRITO =================
-
 
 
 
@@ -425,6 +516,10 @@ if(cerrarCarrito && carritoPanel){
 }
 
 
+
+
+
+
 // ================= BUSCADOR =================
 
 
@@ -468,7 +563,6 @@ if(buscador){
 
 
 
-
 const whatsappBtn = document.getElementById("whatsappBtn");
 
 
@@ -479,86 +573,89 @@ if(whatsappBtn){
 
 
 
-whatsappBtn.addEventListener("click",()=>{
+    whatsappBtn.addEventListener("click",()=>{
 
 
 
-    let nombreCliente = 
-    document.getElementById("nombreCliente")?.value || "";
+        let nombreCliente =
+
+        document.getElementById("nombreCliente")?.value || "";
 
 
 
-    let telefonoCliente = 
-    document.getElementById("telefonoCliente")?.value || "";
+        let telefonoCliente =
+
+        document.getElementById("telefonoCliente")?.value || "";
 
 
 
-    let direccionCliente = 
-    document.getElementById("direccionCliente")?.value || "";
+        let direccionCliente =
+
+        document.getElementById("direccionCliente")?.value || "";
 
 
 
-    let pagoCliente = 
-    document.getElementById("pagoCliente")?.value || "";
+        let pagoCliente =
 
-
-
-
-
-
-    let mensaje = 
-    "Hola MJB, quiero realizar un pedido:%0A%0A";
+        document.getElementById("pagoCliente")?.value || "";
 
 
 
 
 
 
+        let mensaje =
 
-    carrito.forEach(producto=>{
+        "Hola MJB, quiero realizar un pedido:%0A%0A";
 
 
 
-        mensaje += 
 
-        `• ${producto.nombre} x${producto.cantidad} - $${producto.precio * producto.cantidad}%0A`;
+
+
+
+        carrito.forEach(producto=>{
+
+
+
+            mensaje +=
+
+            `• ${producto.nombre} x${producto.cantidad} - $${producto.precio * producto.cantidad}%0A`;
+
+
+        });
+
+
+
+
+
+
+
+        mensaje += `%0ACliente: ${nombreCliente}`;
+
+        mensaje += `%0ATeléfono: ${telefonoCliente}`;
+
+        mensaje += `%0ADirección: ${direccionCliente}`;
+
+        mensaje += `%0AForma de pago: ${pagoCliente}`;
+
+
+
+
+
+
+
+        window.open(
+
+            "https://wa.me/56964240040?text=" + mensaje,
+
+            "_blank"
+
+        );
 
 
 
     });
-
-
-
-
-
-
-
-    mensaje += `%0ACliente: ${nombreCliente}`;
-
-    mensaje += `%0ATeléfono: ${telefonoCliente}`;
-
-    mensaje += `%0ADirección: ${direccionCliente}`;
-
-    mensaje += `%0AForma de pago: ${pagoCliente}`;
-
-
-
-
-
-
-
-
-    window.open(
-
-    "https://wa.me/56964240040?text=" + mensaje,
-
-    "_blank"
-
-    );
-
-
-
-});
 
 
 

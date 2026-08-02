@@ -1198,3 +1198,102 @@ footer p{
 
 }
 
+
+
+
+
+/* ================= AJUSTE SOLO INDEX ================= */
+
+@media (max-width:600px){
+
+    /* Header del index */
+    header .top-header{
+        width:94%;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-items:center;
+        gap:10px;
+        padding:10px 0;
+    }
+
+    /* Logo */
+    header .top-header .logo{
+        order:1;
+    }
+
+    header .top-header .logo img{
+        width:115px;
+    }
+
+    /* Iconos */
+    header .top-header .icons{
+        order:2;
+        display:flex;
+        align-items:center;
+        gap:15px;
+        font-size:19px;
+    }
+
+    header .top-header .cart span{
+        display:none;
+    }
+
+    /* Buscador */
+    header .top-header .search{
+        order:3;
+        width:100%;
+        max-width:none;
+    }
+
+    /* Menú */
+    header .top-header .menu-principal{
+        order:4;
+        width:100%;
+        overflow:hidden;
+    }
+
+    header .top-header .menu-principal ul{
+        display:flex;
+        flex-direction:row;
+        justify-content:flex-start;
+        align-items:center;
+        gap:25px;
+        width:100%;
+        padding:10px 15px;
+        overflow-x:auto;
+        white-space:nowrap;
+        scrollbar-width:none;
+    }
+
+    header .top-header .menu-principal ul::-webkit-scrollbar{
+        display:none;
+    }
+
+    header .top-header .menu-principal a{
+        font-size:14px;
+    }
+
+
+    /* ================= PRODUCTOS INDEX ================= */
+
+    .products .product-grid{
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px;
+    }
+
+    .products .product{
+        width:100%;
+        min-width:0;
+        padding:12px;
+    }
+
+    .products .product img{
+        height:120px;
+    }
+
+}
+
+
+
